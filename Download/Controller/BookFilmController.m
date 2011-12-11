@@ -7,6 +7,7 @@
 //
 
 #import "BookFilmController.h"
+#import "DownloadResource.h"
 
 @implementation BookFilmController
 
@@ -31,6 +32,9 @@
 
 - (void)viewDidLoad
 {
+    [self setBackgroundImageName:DOWNLOAD_BG];
+    [self setDownloadNavigationTitle:self.tabBarItem.title];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

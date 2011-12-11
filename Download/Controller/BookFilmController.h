@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPTableViewController.h"
 
-@interface BookFilmController : UIViewController
+@interface BookFilmController : PPTableViewController
 
 @end
