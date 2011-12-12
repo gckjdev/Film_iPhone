@@ -15,9 +15,15 @@
     NSArray *actorList;
     NSArray *imageUrlList;
     NSArray *priceList;
+    
+    
+    
 }
+@property (nonatomic, retain) NSMutableArray *data;
 
 -(void)updateFilmList;
+
+
 
 @end
 extern FilmService *GlobalGetFilmService();
