@@ -13,6 +13,7 @@
 #import "UINavigationBarExt.h"
 
 #import "BookFilmController.h"
+#import "CinemaController.h"
 //#import "DownloadManageController.h"
 //#import "TopDownloadController.h"
 //#import "ResourceCategoryController.h"
@@ -35,9 +36,10 @@ NSString* GlobalGetServerURL()
 }
 
 enum TAB_INDEX {
-    TAB_TOP = 0,
-    TAB_SITE,
-    TAB_BROWSE
+    PROMOTION = 0,
+    BOOKFILM,
+    CINEMA,
+    HELP
     };
 
 @implementation DownloadAppDelegate
@@ -96,7 +98,7 @@ enum TAB_INDEX {
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     
-	[UIUtils addViewController:[BookFilmController alloc]
+	[UIUtils addViewController:[CinemaController alloc]
                      viewTitle:@"影院"
                      viewImage:BROWSE_ICON
               hasNavController:YES			
@@ -123,7 +125,7 @@ enum TAB_INDEX {
                                                   nil]];
     	
 	self.tabBarController.viewControllers = controllers;	
-    self.tabBarController.selectedIndex = TAB_BROWSE;
+    self.tabBarController.selectedIndex = BOOKFILM;
 	[controllers release];
 }
 

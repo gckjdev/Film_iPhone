@@ -10,18 +10,25 @@
 #import "Film.h"
 #import "FilmManager.h"
 
-FilmService *service;
+FilmService *filmService;
 
-extern FilmService *GlobalGetFilmService()
+FilmService *GlobalGetFilmService()
 {
-    if (service == nil) {
-        service = [[FilmService alloc] init];
+    if (filmService == nil) {
+        filmService = [[FilmService alloc] init];
     }
-    return service;
+    return filmService;
 }
 
 @implementation FilmService
-
+-(id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 
 -(void)testDataInit
 {  
@@ -30,6 +37,8 @@ extern FilmService *GlobalGetFilmService()
     [manager addFilmWithName:@"丁丁历险记：独角兽号的秘密" imageName:@"1.jpg" director:@"史蒂文·斯皮尔伯格" 
                    actorList:[NSArray arrayWithObjects:@"杰米·贝尔",@"安迪·瑟金斯",@"西蒙·佩吉", nil] 
                        price:28 value:60];
+    
+
 }
 -(void)updateFilmList
 {
