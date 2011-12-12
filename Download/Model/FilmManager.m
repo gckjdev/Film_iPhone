@@ -51,7 +51,11 @@ FilmManager * GlobalGetFilmManager()
                  price:(CGFloat)aPrice value:(CGFloat)aValue
 {
     Film *film = [[Film alloc] initWithFilmId:[_filmList count] name:aFilmName 
-                                        image:[UIImage imageNamed:aImageName] director:aDirector actorList:aActorList price:aPrice value:aValue];
+                                        image:[UIImage imageNamed:aImageName] 
+                                        director:aDirector 
+                                        actorList:aActorList 
+                                        price:aPrice 
+                                        value:aValue];
     [_filmList addObject:film];
     [film release];
 }
