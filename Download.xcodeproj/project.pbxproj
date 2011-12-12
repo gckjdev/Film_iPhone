@@ -137,6 +137,8 @@
 		CA63C7931495F9DD00DA8ED2 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA63C7671495F9DD00DA8ED2 /* 8.jpg */; };
 		CA63C7941495F9DD00DA8ED2 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA63C7681495F9DD00DA8ED2 /* 9.jpg */; };
 		CA63C7951495F9DD00DA8ED2 /* the movies.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = CA63C7691495F9DD00DA8ED2 /* the movies.xlsx */; };
+		CA63C79A1495FBE600DA8ED2 /* BuyFilmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA63C7981495FBE600DA8ED2 /* BuyFilmController.m */; };
+		CA63C79B1495FBE600DA8ED2 /* BuyFilmController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA63C7991495FBE600DA8ED2 /* BuyFilmController.xib */; };
 		CA83D14214726BF500E004A6 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA83D14114726BF500E004A6 /* QuickLook.framework */; };
 		CAAC3B9F146C26AD008A74B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAAC3B8C146C26AD008A74B9 /* InfoPlist.strings */; };
 		CAAC3BA0146C26AD008A74B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAAC3B8E146C26AD008A74B9 /* Localizable.strings */; };
@@ -606,6 +608,9 @@
 		CA63C7671495F9DD00DA8ED2 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		CA63C7681495F9DD00DA8ED2 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		CA63C7691495F9DD00DA8ED2 /* the movies.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "the movies.xlsx"; path = "Download/Resource/the movies.xlsx"; sourceTree = SOURCE_ROOT; };
+		CA63C7971495FBE600DA8ED2 /* BuyFilmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyFilmController.h; sourceTree = "<group>"; };
+		CA63C7981495FBE600DA8ED2 /* BuyFilmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyFilmController.m; sourceTree = "<group>"; };
+		CA63C7991495FBE600DA8ED2 /* BuyFilmController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyFilmController.xib; sourceTree = "<group>"; };
 		CA83D14114726BF500E004A6 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		CAAC3B8D146C26AD008A74B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		CAAC3B8F146C26AD008A74B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
@@ -1362,6 +1367,16 @@
 			name = "zh-Hans.lproj";
 			path = "Download/Resource/zh-Hans.lproj";
 			sourceTree = SOURCE_ROOT;
+		};
+		CA63C7961495FBCD00DA8ED2 /* BuyFilm */ = {
+			isa = PBXGroup;
+			children = (
+				CA63C7971495FBE600DA8ED2 /* BuyFilmController.h */,
+				CA63C7981495FBE600DA8ED2 /* BuyFilmController.m */,
+				CA63C7991495FBE600DA8ED2 /* BuyFilmController.xib */,
+			);
+			path = BuyFilm;
+			sourceTree = "<group>";
 		};
 		CAAC3B8B146C26AD008A74B9 /* en.lproj */ = {
 			isa = PBXGroup;
@@ -2508,6 +2523,7 @@
 		CAEA38DB1467C38B006D2975 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA63C7961495FBCD00DA8ED2 /* BuyFilm */,
 				CA63C7291495E6FD00DA8ED2 /* Cinema */,
 				CAE433771495B23F006397FE /* BookFilm */,
 			);
@@ -2868,6 +2884,7 @@
 				CA63C7931495F9DD00DA8ED2 /* 8.jpg in Resources */,
 				CA63C7941495F9DD00DA8ED2 /* 9.jpg in Resources */,
 				CA63C7951495F9DD00DA8ED2 /* the movies.xlsx in Resources */,
+				CA63C79B1495FBE600DA8ED2 /* BuyFilmController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3123,6 +3140,7 @@
 				CA63C7371495E91A00DA8ED2 /* Cinema.m in Sources */,
 				CA63C73A1495EAAD00DA8ED2 /* CinemaManager.m in Sources */,
 				CA63C73D1495EC9200DA8ED2 /* CinemaService.m in Sources */,
+				CA63C79A1495FBE600DA8ED2 /* BuyFilmController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
