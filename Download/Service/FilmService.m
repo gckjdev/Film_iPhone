@@ -36,26 +36,37 @@ extern FilmService *GlobalGetFilmService()
     
     
     
+//    
+//    // Load the data.
+//    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Datadunpin" ofType:@"plist"];
+//    self.data = [NSMutableArray arrayWithContentsOfFile:dataPath];
+//    
+//
+//    
+//    for (int i = 0; i <= 20; i++ ) {
+//        
+//       
+//         NSMutableDictionary *dataItem = [self.data objectAtIndex:i];
+//        
+//        NSLog(@"%@,",[dataItem description]);
+//        
+//        [manager addFilmWithName:[dataItem objectForKey:@"FilmName"] 
+//                       imageName:nil//[UIImage imageNamed:[dataItem objectForKey:@"FilmImage"]]
+//                        director:[dataItem objectForKey:@"Director"]
+//                        actorList:[dataItem objectForKey:@"Actors"]
+//                            price:28
+//                            value:60];
+//    }
+//
+//     
     
-    // Load the data.
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"FilmInformations" ofType:@"plist"];
-    self.data = [NSMutableArray arrayWithContentsOfFile:dataPath];
     
-    int i ;
-    
-    if (i = 0 , i != 20 ,i++  ) {
-        
-        
-        
-    } 
-    
-    
-    NSMutableDictionary *dataItem = [self.data objectAtIndex:i];
+   
     
     
     
     
-    
+
     [manager addFilmWithName:@"丁丁历险记：独角兽号的秘密" 
                    imageName:@"1.jpg" 
                     director:@"史蒂文·斯皮尔伯格" 
@@ -147,9 +158,7 @@ extern FilmService *GlobalGetFilmService()
     [manager addFilmWithName:@"金陵十二钗" imageName:@"20.jpg" director:@"张艺谋" 
                    actorList:[NSArray arrayWithObjects:@"克里斯蒂安·贝尔",@"佟大为",@"窦骁", nil] 
                        price:28 value:60];
-    
 
-    
 
     
     
