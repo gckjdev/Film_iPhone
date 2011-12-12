@@ -10,25 +10,18 @@
 #import "Film.h"
 #import "FilmManager.h"
 
-FilmService *filmService;
+FilmService *service;
 
-FilmService *GlobalGetFilmService()
+extern FilmService *GlobalGetFilmService()
 {
-    if (filmService == nil) {
-        filmService = [[FilmService alloc] init];
+    if (service == nil) {
+        service = [[FilmService alloc] init];
     }
-    return filmService;
+    return service;
 }
 
 @implementation FilmService
--(id)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
+
 
 @synthesize data;  
 
@@ -43,33 +36,50 @@ FilmService *GlobalGetFilmService()
     
     
     
+//    
+//    // Load the data.
+//    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Datadunpin" ofType:@"plist"];
+//    self.data = [NSMutableArray arrayWithContentsOfFile:dataPath];
+//    
+//
+//    
+//    for (int i = 0; i <= 20; i++ ) {
+//        
+//       
+//         NSMutableDictionary *dataItem = [self.data objectAtIndex:i];
+//        
+//        NSLog(@"%@,",[dataItem description]);
+//        
+//        [manager addFilmWithName:[dataItem objectForKey:@"FilmName"] 
+//                       imageName:nil//[UIImage imageNamed:[dataItem objectForKey:@"FilmImage"]]
+//                        director:[dataItem objectForKey:@"Director"]
+//                        actorList:[dataItem objectForKey:@"Actors"]
+//                            price:28
+//                            value:60];
+//    }
+//
+//     
     
-    // Load the data.
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"FilmInformations" ofType:@"plist"];
-    self.data = [NSMutableArray arrayWithContentsOfFile:dataPath];
     
-    int i ;
-    
-    if (i = 0 , i != 20 ,i++  ) {
-        
-        
-        
-    } 
-    
-    
-    NSMutableDictionary *dataItem = [self.data objectAtIndex:i];
+   
     
     
     
     
-    
+
     [manager addFilmWithName:@"丁丁历险记：独角兽号的秘密" 
                    imageName:@"1.jpg" 
                     director:@"史蒂文·斯皮尔伯格" 
                    actorList:[NSArray arrayWithObjects:@"杰米·贝尔",@"安迪·瑟金斯",@"西蒙·佩吉", nil] 
                        price:28 value:60];
     
-
+    
+    
+    
+    [manager addFilmWithName:@"丁丁历险记：独角兽号的秘密" imageName:@"1.jpg" director:@"史蒂文·斯皮尔伯格" 
+                   actorList:[NSArray arrayWithObjects:@"杰米·贝尔",@"安迪·瑟金斯",@"西蒙·佩吉", nil] 
+                       price:28 value:60];
+    
     [manager addFilmWithName:@"三傻大闹宝莱坞" imageName:@"2.jpg" director:@"拉库马·希拉尼" 
                    actorList:[NSArray arrayWithObjects:@"阿米尔·汗",@"马德哈万 ",@"沙尔曼·乔什吉", nil] 
                        price:28 value:60];
@@ -148,8 +158,14 @@ FilmService *GlobalGetFilmService()
     [manager addFilmWithName:@"金陵十二钗" imageName:@"20.jpg" director:@"张艺谋" 
                    actorList:[NSArray arrayWithObjects:@"克里斯蒂安·贝尔",@"佟大为",@"窦骁", nil] 
                        price:28 value:60];
-    
 
+
+    
+    
+    
+    
+    
+    
 }
 -(void)updateFilmList
 {
