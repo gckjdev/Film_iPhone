@@ -118,6 +118,33 @@
 		CABA82141470D053008E8AFB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA82131470D052008E8AFB /* Security.framework */; };
 		CABA823D14715C6B008E8AFB /* star1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA823B14715C6B008E8AFB /* star1@2x.png */; };
 		CABA823E14715C6B008E8AFB /* star2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA823C14715C6B008E8AFB /* star2@2x.png */; };
+		CAE433711495AB64006397FE /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433701495AB64006397FE /* Film.m */; };
+		CAE433751495AB75006397FE /* FilmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433741495AB75006397FE /* FilmManager.m */; };
+		CAE4337B1495B280006397FE /* BookFilmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433791495B280006397FE /* BookFilmController.m */; };
+		CAE4337C1495B280006397FE /* BookFilmController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE4337A1495B280006397FE /* BookFilmController.xib */; };
+		CAE433801495B2A1006397FE /* BookFilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE4337E1495B2A1006397FE /* BookFilmCell.m */; };
+		CAE433811495B2A1006397FE /* BookFilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE4337F1495B2A1006397FE /* BookFilmCell.xib */; };
+		CAE433881495BA08006397FE /* FilmService.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433871495BA08006397FE /* FilmService.m */; };
+		CAE4339E1495D03E006397FE /* 3-110926163542X1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4338A1495D03E006397FE /* 3-110926163542X1.jpg */; };
+		CAE4339F1495D03E006397FE /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4338B1495D03E006397FE /* 1.jpg */; };
+		CAE433A01495D03E006397FE /* 三傻大闹宝莱坞.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4338C1495D03E006397FE /* 三傻大闹宝莱坞.jpg */; };
+		CAE433A11495D03E006397FE /* 不怕贼惦记.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4338D1495D03E006397FE /* 不怕贼惦记.jpg */; };
+		CAE433A21495D03E006397FE /* 东成西就2011.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4338E1495D03E006397FE /* 东成西就2011.jpg */; };
+		CAE433A31495D03E006397FE /* 午夜凶梦.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4338F1495D03E006397FE /* 午夜凶梦.jpg */; };
+		CAE433A41495D03E006397FE /* 婚前试爱.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433901495D03E006397FE /* 婚前试爱.jpg */; };
+		CAE433A51495D03E006397FE /* 巨额交易.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433911495D03E006397FE /* 巨额交易.jpg */; };
+		CAE433A61495D03E006397FE /* 开心家族.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433921495D03E006397FE /* 开心家族.jpg */; };
+		CAE433A71495D03E006397FE /* 开心魔法.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433931495D03E006397FE /* 开心魔法.jpg */; };
+		CAE433A81495D03E006397FE /* 惊天战神.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433941495D03E006397FE /* 惊天战神.jpg */; };
+		CAE433A91495D03E006397FE /* 深海之战.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433951495D03E006397FE /* 深海之战.jpg */; };
+		CAE433AA1495D03E006397FE /* 翻滚吧！阿信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433961495D03E006397FE /* 翻滚吧！阿信.jpg */; };
+		CAE433AB1495D03E006397FE /* 赛车传奇.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433971495D03E006397FE /* 赛车传奇.jpg */; };
+		CAE433AC1495D03E006397FE /* 追爱.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433981495D03E006397FE /* 追爱.jpg */; };
+		CAE433AD1495D03E006397FE /* 遍地狼烟.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE433991495D03E006397FE /* 遍地狼烟.jpg */; };
+		CAE433AE1495D03E006397FE /* 驱魔者.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4339A1495D03E006397FE /* 驱魔者.jpg */; };
+		CAE433AF1495D03E006397FE /* 魔法奇幻秀.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4339B1495D03E006397FE /* 魔法奇幻秀.jpg */; };
+		CAE433B01495D03E006397FE /* 鸿门宴传奇.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4339C1495D03E006397FE /* 鸿门宴传奇.jpg */; };
+		CAE433B11495D03E006397FE /* 龙门飞甲.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4339D1495D03E006397FE /* 龙门飞甲.jpg */; };
 		CAE45CB3148F4EE400447806 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE45CAB148F4EE400447806 /* ReviewRequest.strings */; };
 		CAE45CB4148F4EE400447806 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE45CAE148F4EE400447806 /* ReviewRequest.strings */; };
 		CAE45CB5148F4EE400447806 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE45CB1148F4EE400447806 /* ReviewRequest.strings */; };
@@ -416,8 +443,6 @@
 		CAEA38C91467BE32006D2975 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEA38C81467BE32006D2975 /* libz.dylib */; };
 		CAEA38CB1467BE3E006D2975 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEA38CA1467BE3E006D2975 /* libxml2.dylib */; };
 		CAEA38CD1467C15E006D2975 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEA38CC1467C15E006D2975 /* CoreText.framework */; };
-		CAF6A4191494FA460007199B /* BookFilmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF6A4171494FA460007199B /* BookFilmController.m */; };
-		CAF6A41A1494FA460007199B /* BookFilmController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF6A4181494FA460007199B /* BookFilmController.xib */; };
 		CAF71223146F6D3B00FD161D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF71222146F6D3A00FD161D /* MediaPlayer.framework */; };
 		EAE9CFC01486319D00EB8755 /* png_93-82.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBE1486319D00EB8755 /* png_93-82.png */; };
 		EAE9CFC11486319D00EB8755 /* png_178@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBF1486319D00EB8755 /* png_178@2x.png */; };
@@ -548,6 +573,38 @@
 		CABA82131470D052008E8AFB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CABA823B14715C6B008E8AFB /* star1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star1@2x.png"; sourceTree = "<group>"; };
 		CABA823C14715C6B008E8AFB /* star2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star2@2x.png"; sourceTree = "<group>"; };
+		CAE4336F1495AB64006397FE /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
+		CAE433701495AB64006397FE /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
+		CAE433731495AB75006397FE /* FilmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmManager.h; sourceTree = "<group>"; };
+		CAE433741495AB75006397FE /* FilmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmManager.m; sourceTree = "<group>"; };
+		CAE433781495B280006397FE /* BookFilmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFilmController.h; sourceTree = "<group>"; };
+		CAE433791495B280006397FE /* BookFilmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFilmController.m; sourceTree = "<group>"; };
+		CAE4337A1495B280006397FE /* BookFilmController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookFilmController.xib; sourceTree = "<group>"; };
+		CAE4337D1495B2A1006397FE /* BookFilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFilmCell.h; sourceTree = "<group>"; };
+		CAE4337E1495B2A1006397FE /* BookFilmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFilmCell.m; sourceTree = "<group>"; };
+		CAE4337F1495B2A1006397FE /* BookFilmCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookFilmCell.xib; sourceTree = "<group>"; };
+		CAE433861495BA08006397FE /* FilmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmService.h; sourceTree = "<group>"; };
+		CAE433871495BA08006397FE /* FilmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmService.m; sourceTree = "<group>"; };
+		CAE4338A1495D03E006397FE /* 3-110926163542X1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-110926163542X1.jpg"; sourceTree = "<group>"; };
+		CAE4338B1495D03E006397FE /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		CAE4338C1495D03E006397FE /* 三傻大闹宝莱坞.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "三傻大闹宝莱坞.jpg"; sourceTree = "<group>"; };
+		CAE4338D1495D03E006397FE /* 不怕贼惦记.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "不怕贼惦记.jpg"; sourceTree = "<group>"; };
+		CAE4338E1495D03E006397FE /* 东成西就2011.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "东成西就2011.jpg"; sourceTree = "<group>"; };
+		CAE4338F1495D03E006397FE /* 午夜凶梦.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "午夜凶梦.jpg"; sourceTree = "<group>"; };
+		CAE433901495D03E006397FE /* 婚前试爱.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "婚前试爱.jpg"; sourceTree = "<group>"; };
+		CAE433911495D03E006397FE /* 巨额交易.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "巨额交易.jpg"; sourceTree = "<group>"; };
+		CAE433921495D03E006397FE /* 开心家族.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "开心家族.jpg"; sourceTree = "<group>"; };
+		CAE433931495D03E006397FE /* 开心魔法.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "开心魔法.jpg"; sourceTree = "<group>"; };
+		CAE433941495D03E006397FE /* 惊天战神.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "惊天战神.jpg"; sourceTree = "<group>"; };
+		CAE433951495D03E006397FE /* 深海之战.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "深海之战.jpg"; sourceTree = "<group>"; };
+		CAE433961495D03E006397FE /* 翻滚吧！阿信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "翻滚吧！阿信.jpg"; sourceTree = "<group>"; };
+		CAE433971495D03E006397FE /* 赛车传奇.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "赛车传奇.jpg"; sourceTree = "<group>"; };
+		CAE433981495D03E006397FE /* 追爱.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "追爱.jpg"; sourceTree = "<group>"; };
+		CAE433991495D03E006397FE /* 遍地狼烟.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "遍地狼烟.jpg"; sourceTree = "<group>"; };
+		CAE4339A1495D03E006397FE /* 驱魔者.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "驱魔者.jpg"; sourceTree = "<group>"; };
+		CAE4339B1495D03E006397FE /* 魔法奇幻秀.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "魔法奇幻秀.jpg"; sourceTree = "<group>"; };
+		CAE4339C1495D03E006397FE /* 鸿门宴传奇.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鸿门宴传奇.jpg"; sourceTree = "<group>"; };
+		CAE4339D1495D03E006397FE /* 龙门飞甲.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "龙门飞甲.jpg"; sourceTree = "<group>"; };
 		CAE45CAC148F4EE400447806 /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = ReviewRequest.strings; sourceTree = "<group>"; };
 		CAE45CAF148F4EE400447806 /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = ReviewRequest.strings; sourceTree = "<group>"; };
 		CAE45CB2148F4EE400447806 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ReviewRequest.strings; sourceTree = "<group>"; };
@@ -1077,9 +1134,6 @@
 		CAEA38C81467BE32006D2975 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CAEA38CA1467BE3E006D2975 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CAEA38CC1467C15E006D2975 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		CAF6A4161494FA460007199B /* BookFilmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFilmController.h; sourceTree = "<group>"; };
-		CAF6A4171494FA460007199B /* BookFilmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFilmController.m; sourceTree = "<group>"; };
-		CAF6A4181494FA460007199B /* BookFilmController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookFilmController.xib; sourceTree = "<group>"; };
 		CAF71222146F6D3A00FD161D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		EAE9CFBE1486319D00EB8755 /* png_93-82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_93-82.png"; sourceTree = "<group>"; };
 		EAE9CFBF1486319D00EB8755 /* png_178@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_178@2x.png"; sourceTree = "<group>"; };
@@ -1252,6 +1306,55 @@
 			path = zh_Hans.lproj;
 			sourceTree = "<group>";
 		};
+		CAE433771495B23F006397FE /* BookFilm */ = {
+			isa = PBXGroup;
+			children = (
+				CAE433781495B280006397FE /* BookFilmController.h */,
+				CAE433791495B280006397FE /* BookFilmController.m */,
+				CAE4337A1495B280006397FE /* BookFilmController.xib */,
+				CAE4337D1495B2A1006397FE /* BookFilmCell.h */,
+				CAE4337E1495B2A1006397FE /* BookFilmCell.m */,
+				CAE4337F1495B2A1006397FE /* BookFilmCell.xib */,
+			);
+			path = BookFilm;
+			sourceTree = "<group>";
+		};
+		CAE433851495BA08006397FE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CAE433861495BA08006397FE /* FilmService.h */,
+				CAE433871495BA08006397FE /* FilmService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CAE433891495D03E006397FE /* film_pics */ = {
+			isa = PBXGroup;
+			children = (
+				CAE4338A1495D03E006397FE /* 3-110926163542X1.jpg */,
+				CAE4338B1495D03E006397FE /* 1.jpg */,
+				CAE4338C1495D03E006397FE /* 三傻大闹宝莱坞.jpg */,
+				CAE4338D1495D03E006397FE /* 不怕贼惦记.jpg */,
+				CAE4338E1495D03E006397FE /* 东成西就2011.jpg */,
+				CAE4338F1495D03E006397FE /* 午夜凶梦.jpg */,
+				CAE433901495D03E006397FE /* 婚前试爱.jpg */,
+				CAE433911495D03E006397FE /* 巨额交易.jpg */,
+				CAE433921495D03E006397FE /* 开心家族.jpg */,
+				CAE433931495D03E006397FE /* 开心魔法.jpg */,
+				CAE433941495D03E006397FE /* 惊天战神.jpg */,
+				CAE433951495D03E006397FE /* 深海之战.jpg */,
+				CAE433961495D03E006397FE /* 翻滚吧！阿信.jpg */,
+				CAE433971495D03E006397FE /* 赛车传奇.jpg */,
+				CAE433981495D03E006397FE /* 追爱.jpg */,
+				CAE433991495D03E006397FE /* 遍地狼烟.jpg */,
+				CAE4339A1495D03E006397FE /* 驱魔者.jpg */,
+				CAE4339B1495D03E006397FE /* 魔法奇幻秀.jpg */,
+				CAE4339C1495D03E006397FE /* 鸿门宴传奇.jpg */,
+				CAE4339D1495D03E006397FE /* 龙门飞甲.jpg */,
+			);
+			path = film_pics;
+			sourceTree = "<group>";
+		};
 		CAE45CAA148F4EE400447806 /* zh_Hant.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -1331,9 +1434,9 @@
 		CAEA30D51467BCAE006D2975 /* Download */ = {
 			isa = PBXGroup;
 			children = (
+				CAE433851495BA08006397FE /* Service */,
 				CAEA38DB1467C38B006D2975 /* Controller */,
 				CAEA38DC1467C38B006D2975 /* Model */,
-				CAEA38DE1467C38B006D2975 /* Service */,
 				CAEA38DF1467C38B006D2975 /* Util */,
 				CAEA38DD1467C38B006D2975 /* Resource */,
 				CAEA30DE1467BCAE006D2975 /* DownloadAppDelegate.h */,
@@ -2342,9 +2445,7 @@
 		CAEA38DB1467C38B006D2975 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CAF6A4161494FA460007199B /* BookFilmController.h */,
-				CAF6A4171494FA460007199B /* BookFilmController.m */,
-				CAF6A4181494FA460007199B /* BookFilmController.xib */,
+				CAE433771495B23F006397FE /* BookFilm */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2352,6 +2453,10 @@
 		CAEA38DC1467C38B006D2975 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CAE4336F1495AB64006397FE /* Film.h */,
+				CAE433701495AB64006397FE /* Film.m */,
+				CAE433731495AB75006397FE /* FilmManager.h */,
+				CAE433741495AB75006397FE /* FilmManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2359,17 +2464,11 @@
 		CAEA38DD1467C38B006D2975 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CAE433891495D03E006397FE /* film_pics */,
 				CA222AE71492105500F168D4 /* 57.png */,
 				CA222AE81492105500F168D4 /* 57@2x.png */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		CAEA38DE1467C38B006D2975 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		CAEA38DF1467C38B006D2975 /* Util */ = {
@@ -2673,7 +2772,28 @@
 				CAE45CB5148F4EE400447806 /* ReviewRequest.strings in Resources */,
 				CA222AE91492105500F168D4 /* 57.png in Resources */,
 				CA222AEA1492105500F168D4 /* 57@2x.png in Resources */,
-				CAF6A41A1494FA460007199B /* BookFilmController.xib in Resources */,
+				CAE4337C1495B280006397FE /* BookFilmController.xib in Resources */,
+				CAE433811495B2A1006397FE /* BookFilmCell.xib in Resources */,
+				CAE4339E1495D03E006397FE /* 3-110926163542X1.jpg in Resources */,
+				CAE4339F1495D03E006397FE /* 1.jpg in Resources */,
+				CAE433A01495D03E006397FE /* 三傻大闹宝莱坞.jpg in Resources */,
+				CAE433A11495D03E006397FE /* 不怕贼惦记.jpg in Resources */,
+				CAE433A21495D03E006397FE /* 东成西就2011.jpg in Resources */,
+				CAE433A31495D03E006397FE /* 午夜凶梦.jpg in Resources */,
+				CAE433A41495D03E006397FE /* 婚前试爱.jpg in Resources */,
+				CAE433A51495D03E006397FE /* 巨额交易.jpg in Resources */,
+				CAE433A61495D03E006397FE /* 开心家族.jpg in Resources */,
+				CAE433A71495D03E006397FE /* 开心魔法.jpg in Resources */,
+				CAE433A81495D03E006397FE /* 惊天战神.jpg in Resources */,
+				CAE433A91495D03E006397FE /* 深海之战.jpg in Resources */,
+				CAE433AA1495D03E006397FE /* 翻滚吧！阿信.jpg in Resources */,
+				CAE433AB1495D03E006397FE /* 赛车传奇.jpg in Resources */,
+				CAE433AC1495D03E006397FE /* 追爱.jpg in Resources */,
+				CAE433AD1495D03E006397FE /* 遍地狼烟.jpg in Resources */,
+				CAE433AE1495D03E006397FE /* 驱魔者.jpg in Resources */,
+				CAE433AF1495D03E006397FE /* 魔法奇幻秀.jpg in Resources */,
+				CAE433B01495D03E006397FE /* 鸿门宴传奇.jpg in Resources */,
+				CAE433B11495D03E006397FE /* 龙门飞甲.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2919,7 +3039,11 @@
 				CAAF53CD1468D0A10071F5C3 /* WebViewAdditions.m in Sources */,
 				CAAF53D11468D42E0071F5C3 /* WebViewTouchWindow.m in Sources */,
 				CA19F0DA1484CDB900CDF114 /* DownloadResource.m in Sources */,
-				CAF6A4191494FA460007199B /* BookFilmController.m in Sources */,
+				CAE433711495AB64006397FE /* Film.m in Sources */,
+				CAE433751495AB75006397FE /* FilmManager.m in Sources */,
+				CAE4337B1495B280006397FE /* BookFilmController.m in Sources */,
+				CAE433801495B2A1006397FE /* BookFilmCell.m in Sources */,
+				CAE433881495BA08006397FE /* FilmService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -76,7 +76,7 @@ enum TAB_INDEX {
     [self.tabBarController setTextColor:BAR_BUTTON_TEXT_NORMAL_COLOR
                         selectTextColor:BAR_BUTTON_TEXT_COLOR];
     self.tabBarController.buttonStyle = TAB_BUTTON_STYLE_ICON;    
-    self.tabBarController.selectedIndex = 0;
+    self.tabBarController.selectedIndex = 1;
     
     self.tabBarController.animation = CubeTabBarControllerAnimationOutside;
     self.tabBarController.backgroundColor = [UIColor blackColor];
@@ -138,7 +138,7 @@ enum TAB_INDEX {
     self.window = [[[WebViewTouchWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     [self initTabViewControllers];
     
-    self.dataManager = [[CoreDataManager alloc] initWithDBName:kDbFileName dataModelName:nil];
+//    self.dataManager = [[CoreDataManager alloc] initWithDBName:kDbFileName dataModelName:nil];
 //    workingQueue = dispatch_queue_create("main working queue", NULL);    
     
     // init service
