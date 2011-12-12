@@ -11,6 +11,7 @@
 #import "BookFilmCell.h"
 #import "FilmManager.h"
 #import "FilmService.h"
+#import "BuyFilmController.h"
 
 @implementation BookFilmController
 
@@ -57,6 +58,12 @@
     return [BookFilmCell getCellHeight];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BuyFilmController *buyFilmController = [[BuyFilmController alloc] init];
+    [self.navigationController pushViewController:buyFilmController animated:YES];
+    [buyFilmController release];
+}
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
