@@ -1,18 +1,19 @@
 //
-//  BookFilmController.m
+//  CinemaController.m
 //  Download
 //
-//  Created by  on 11-12-11.
+//  Created by  on 11-12-12.
 //  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
 //
 
+#import "CinemaController.h"
 #import "BookFilmController.h"
 #import "DownloadResource.h"
-#import "BookFilmCell.h"
-#import "FilmManager.h"
-#import "FilmService.h"
-
-@implementation BookFilmController
+#import "CinemaService.h"
+#import "CinemaManager.h"
+#import "CinemaCell.h"
+#import "Cinema.h"
+@implementation CinemaController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +32,7 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
 #pragma mark - tableView delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -40,34 +42,49 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
- 
-    BookFilmCell *cell = [tableView dequeueReusableCellWithIdentifier:[BookFilmCell getCellIdentifier]];
+    
+    CinemaCell *cell = [tableView dequeueReusableCellWithIdentifier:[CinemaCell getCellIdentifier]];
     if (cell == nil) {
-        cell = [BookFilmCell createCell:self];
+        cell = [CinemaCell createCell:self];
     }
-    Film *film = [dataList objectAtIndex:indexPath.row];
-    if (film) {
-       [cell setCellInfo:film]; 
+    Cinema *cinema = [dataList objectAtIndex:indexPath.row];
+    if (cinema) {
+        [cell setCellInfo:cinema]; 
     }
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [BookFilmCell getCellHeight];
+    return [CinemaCell getCellHeight];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BookFilmController *bookFilmController = [[BookFilmController alloc] init];
+    [self.navigationController pushViewController:bookFilmController animated:YES];
+    [bookFilmController release];
 }
 
+#pragma mark - CinemaServiceDelegate
+-(void)willUpdateCinemaList
+{
+    
+}
+
+-(void)didUpdatedCinemaList:(NSInteger)errorCode
+{
+    
+}
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [self setBackgroundImageName:DOWNLOAD_BG];
-    [self setDownloadNavigationTitle:self.tabBarItem.title];
+    [self setDownloadNavigationTitle:@"电影院"];
     [super viewDidLoad];
-
-    
-    [GlobalGetFilmService() updateFilmList]; 
-    self.dataList = [[FilmManager defaultManager] filmList];
+    // Do any additional setup after loading the view from its nib.
+    [GlobalGetCinemaService() updateCinemaListWithCity:@"广州" delegate:self];
+    self.dataList = [[CinemaManager defaultManager] cinemaList];
 }
 
 - (void)viewDidUnload

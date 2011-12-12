@@ -38,16 +38,17 @@
 
 + (CGFloat)getCellHeight
 {
-    return 184.0f;
+    return 182.0f;
 }
 
 
 - (void)setCellInfo:(Film *)film
 {
 
+    [film.actorList componentsJoinedByString:@" "];
     self.filmName.text = [NSString stringWithFormat:@"%@: %@",@"电影名",film.name];
     self.director.text  = [NSString stringWithFormat:@"%@: %@",@"导演",film.director];
-    self.actors.text  = [NSString stringWithFormat:@"%@: %@",@"主演",[film.actorList objectAtIndex:0]];
+    self.actors.text  = [NSString stringWithFormat:@"%@: %@",@"主演",[film.actorList componentsJoinedByString:@"/"]];
     self.price.text  = [NSString stringWithFormat:@"%@: %.1f",@"价格",film.price];
     self.debate.text  = [NSString stringWithFormat:@"%@: %.1f",@"折扣",film.debate];
 
