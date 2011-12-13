@@ -215,6 +215,16 @@
 		CAC611831496E75000C30C60 /* UIToolbar+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC610D41496E75000C30C60 /* UIToolbar+TKCategory.m */; };
 		CAC611841496E75000C30C60 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC610D61496E75000C30C60 /* UIView+TKCategory.m */; };
 		CAC611851496E75000C30C60 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CAC610D71496E75000C30C60 /* TapkuLibrary.bundle */; };
+		CAC611D71496F6E300C30C60 /* PickSeatController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC611D51496F6E300C30C60 /* PickSeatController.m */; };
+		CAC611D81496F6E300C30C60 /* PickSeatController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC611D61496F6E300C30C60 /* PickSeatController.xib */; };
+		CAC611DC1496F8B900C30C60 /* set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC611DA1496F8B900C30C60 /* set@2x.png */; };
+		CAC611DD1496F8B900C30C60 /* set2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC611DB1496F8B900C30C60 /* set2@2x.png */; };
+		CAC611E31497459100C30C60 /* telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC611E11497459000C30C60 /* telephone.png */; };
+		CAC611E41497459100C30C60 /* unionPay.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC611E21497459000C30C60 /* unionPay.png */; };
+		CAC611E614974AF600C30C60 /* PhonePay.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC611E514974AF500C30C60 /* PhonePay.png */; };
+		CAC611EA1497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC611E91497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m */; };
+		CAC611F414977E7F00C30C60 /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC611F214977E7F00C30C60 /* HelpController.m */; };
+		CAC611F514977E7F00C30C60 /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC611F314977E7F00C30C60 /* HelpController.xib */; };
 		CAE433711495AB64006397FE /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433701495AB64006397FE /* Film.m */; };
 		CAE433751495AB75006397FE /* FilmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433741495AB75006397FE /* FilmManager.m */; };
 		CAE4337B1495B280006397FE /* BookFilmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433791495B280006397FE /* BookFilmController.m */; };
@@ -750,6 +760,19 @@
 		CAC610D61496E75000C30C60 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
 		CAC610D71496E75000C30C60 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapkuLibrary.bundle; sourceTree = "<group>"; };
 		CAC611C21496E7E200C30C60 /* TapkuLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapkuLibrary.h; sourceTree = "<group>"; };
+		CAC611D41496F6E300C30C60 /* PickSeatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickSeatController.h; sourceTree = "<group>"; };
+		CAC611D51496F6E300C30C60 /* PickSeatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickSeatController.m; sourceTree = "<group>"; };
+		CAC611D61496F6E300C30C60 /* PickSeatController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickSeatController.xib; sourceTree = "<group>"; };
+		CAC611DA1496F8B900C30C60 /* set@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set@2x.png"; sourceTree = "<group>"; };
+		CAC611DB1496F8B900C30C60 /* set2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set2@2x.png"; sourceTree = "<group>"; };
+		CAC611E11497459000C30C60 /* telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telephone.png; sourceTree = "<group>"; };
+		CAC611E21497459000C30C60 /* unionPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unionPay.png; sourceTree = "<group>"; };
+		CAC611E514974AF500C30C60 /* PhonePay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhonePay.png; sourceTree = "<group>"; };
+		CAC611E81497544300C30C60 /* UIViewController+DownloadViewControllerAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DownloadViewControllerAddition.h"; sourceTree = "<group>"; };
+		CAC611E91497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DownloadViewControllerAddition.m"; sourceTree = "<group>"; };
+		CAC611F114977E7F00C30C60 /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
+		CAC611F214977E7F00C30C60 /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
+		CAC611F314977E7F00C30C60 /* HelpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
 		CAE4336F1495AB64006397FE /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
 		CAE433701495AB64006397FE /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
 		CAE433731495AB75006397FE /* FilmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmManager.h; sourceTree = "<group>"; };
@@ -1369,6 +1392,9 @@
 				CA63C7971495FBE600DA8ED2 /* BuyFilmController.h */,
 				CA63C7981495FBE600DA8ED2 /* BuyFilmController.m */,
 				CA63C7991495FBE600DA8ED2 /* BuyFilmController.xib */,
+				CAC611D41496F6E300C30C60 /* PickSeatController.h */,
+				CAC611D51496F6E300C30C60 /* PickSeatController.m */,
+				CAC611D61496F6E300C30C60 /* PickSeatController.xib */,
 			);
 			path = BuyFilm;
 			sourceTree = "<group>";
@@ -1582,6 +1608,26 @@
 			path = TapkuLibrary;
 			sourceTree = "<group>";
 		};
+		CAC611E71497544300C30C60 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CAC611E81497544300C30C60 /* UIViewController+DownloadViewControllerAddition.h */,
+				CAC611E91497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m */,
+			);
+			name = Common;
+			path = Controller/Common;
+			sourceTree = "<group>";
+		};
+		CAC611F014977E5900C30C60 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				CAC611F114977E7F00C30C60 /* HelpController.h */,
+				CAC611F214977E7F00C30C60 /* HelpController.m */,
+				CAC611F314977E7F00C30C60 /* HelpController.xib */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
 		CAE433771495B23F006397FE /* BookFilm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1609,6 +1655,11 @@
 		CAE433891495D03E006397FE /* film_pics */ = {
 			isa = PBXGroup;
 			children = (
+				CAC611E514974AF500C30C60 /* PhonePay.png */,
+				CAC611E11497459000C30C60 /* telephone.png */,
+				CAC611E21497459000C30C60 /* unionPay.png */,
+				CAC611DA1496F8B900C30C60 /* set@2x.png */,
+				CAC611DB1496F8B900C30C60 /* set2@2x.png */,
 				CA63C7521495F9DC00DA8ED2 /* Default.png */,
 				CA63C7531495F9DD00DA8ED2 /* Default@2x.png */,
 				CA63C7541495F9DD00DA8ED2 /* film_pics */,
@@ -2489,6 +2540,7 @@
 		CAEA38DB1467C38B006D2975 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CAC611F014977E5900C30C60 /* Help */,
 				CA63C7961495FBCD00DA8ED2 /* BuyFilm */,
 				CA63C7291495E6FD00DA8ED2 /* Cinema */,
 				CAE433771495B23F006397FE /* BookFilm */,
@@ -2531,6 +2583,7 @@
 		CAEA38E01467C3FA006D2975 /* DownloadCommon */ = {
 			isa = PBXGroup;
 			children = (
+				CAC611E71497544300C30C60 /* Common */,
 				CAEA38E31467C3FA006D2975 /* Resource */,
 				CAEA38E51467C3FA006D2975 /* Util */,
 			);
@@ -2854,6 +2907,13 @@
 				CAC611451496E75000C30C60 /* LICENSE.txt in Resources */,
 				CAC611461496E75000C30C60 /* README.txt in Resources */,
 				CAC611851496E75000C30C60 /* TapkuLibrary.bundle in Resources */,
+				CAC611D81496F6E300C30C60 /* PickSeatController.xib in Resources */,
+				CAC611DC1496F8B900C30C60 /* set@2x.png in Resources */,
+				CAC611DD1496F8B900C30C60 /* set2@2x.png in Resources */,
+				CAC611E31497459100C30C60 /* telephone.png in Resources */,
+				CAC611E41497459100C30C60 /* unionPay.png in Resources */,
+				CAC611E614974AF600C30C60 /* PhonePay.png in Resources */,
+				CAC611F514977E7F00C30C60 /* HelpController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3106,6 +3166,9 @@
 				CAC611821496E75000C30C60 /* UIScrollview+TKCategory.m in Sources */,
 				CAC611831496E75000C30C60 /* UIToolbar+TKCategory.m in Sources */,
 				CAC611841496E75000C30C60 /* UIView+TKCategory.m in Sources */,
+				CAC611D71496F6E300C30C60 /* PickSeatController.m in Sources */,
+				CAC611EA1497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m in Sources */,
+				CAC611F414977E7F00C30C60 /* HelpController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
