@@ -451,6 +451,8 @@
 		E428A8AA1496014B001604E5 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E428A8961496014B001604E5 /* 18.jpg */; };
 		E428A8AB1496014B001604E5 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E428A8971496014B001604E5 /* 19.jpg */; };
 		E428A8AC1496014B001604E5 /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E428A8981496014B001604E5 /* 20.jpg */; };
+		E428A8B514960EA7001604E5 /* BuyFilmController.m in Sources */ = {isa = PBXBuildFile; fileRef = E428A8B314960EA7001604E5 /* BuyFilmController.m */; };
+		E428A8B614960EA7001604E5 /* BuyFilmController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E428A8B414960EA7001604E5 /* BuyFilmController.xib */; };
 		E47D47721495FB1800E1B9CA /* FilmInformations.plist in Resources */ = {isa = PBXBuildFile; fileRef = E47D47711495FB1800E1B9CA /* FilmInformations.plist */; };
 		EAE9CFC01486319D00EB8755 /* png_93-82.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBE1486319D00EB8755 /* png_93-82.png */; };
 		EAE9CFC11486319D00EB8755 /* png_178@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBF1486319D00EB8755 /* png_178@2x.png */; };
@@ -1155,6 +1157,9 @@
 		E428A8961496014B001604E5 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 18.jpg; path = Download/Resource/film_pics/18.jpg; sourceTree = SOURCE_ROOT; };
 		E428A8971496014B001604E5 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 19.jpg; path = Download/Resource/film_pics/19.jpg; sourceTree = SOURCE_ROOT; };
 		E428A8981496014B001604E5 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 20.jpg; path = Download/Resource/film_pics/20.jpg; sourceTree = SOURCE_ROOT; };
+		E428A8B214960EA7001604E5 /* BuyFilmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyFilmController.h; sourceTree = "<group>"; };
+		E428A8B314960EA7001604E5 /* BuyFilmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyFilmController.m; sourceTree = "<group>"; };
+		E428A8B414960EA7001604E5 /* BuyFilmController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyFilmController.xib; sourceTree = "<group>"; };
 		E47D47711495FB1800E1B9CA /* FilmInformations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FilmInformations.plist; path = ../Controller/FilmInformations.plist; sourceTree = "<group>"; };
 		EAE9CFBE1486319D00EB8755 /* png_93-82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_93-82.png"; sourceTree = "<group>"; };
 		EAE9CFBF1486319D00EB8755 /* png_178@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_178@2x.png"; sourceTree = "<group>"; };
@@ -2447,6 +2452,7 @@
 		CAEA38DB1467C38B006D2975 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E428A8B114960EA7001604E5 /* BuyFilm */,
 				E428A87014960099001604E5 /* Cinema */,
 				CAE433771495B23F006397FE /* BookFilm */,
 			);
@@ -2562,6 +2568,16 @@
 				E428A87614960099001604E5 /* CinemaController.xib */,
 			);
 			path = Cinema;
+			sourceTree = "<group>";
+		};
+		E428A8B114960EA7001604E5 /* BuyFilm */ = {
+			isa = PBXGroup;
+			children = (
+				E428A8B214960EA7001604E5 /* BuyFilmController.h */,
+				E428A8B314960EA7001604E5 /* BuyFilmController.m */,
+				E428A8B414960EA7001604E5 /* BuyFilmController.xib */,
+			);
+			path = BuyFilm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2839,6 +2855,7 @@
 				E428A8AA1496014B001604E5 /* 18.jpg in Resources */,
 				E428A8AB1496014B001604E5 /* 19.jpg in Resources */,
 				E428A8AC1496014B001604E5 /* 20.jpg in Resources */,
+				E428A8B614960EA7001604E5 /* BuyFilmController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3094,6 +3111,7 @@
 				E428A87E149600EA001604E5 /* CinemaService.m in Sources */,
 				E428A88314960106001604E5 /* Cinema.m in Sources */,
 				E428A88414960106001604E5 /* CinemaManager.m in Sources */,
+				E428A8B514960EA7001604E5 /* BuyFilmController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
