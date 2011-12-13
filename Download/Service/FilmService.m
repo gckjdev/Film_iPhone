@@ -58,31 +58,44 @@ extern FilmService *GlobalGetFilmService()
 //                            value:60];
 //    }
 //
-//     
-    [manager addFilmWithName:@"东成西就2011" imageName:@"4.jpg" director:@"刘镇伟 区雪儿" 
+//
+    
+    
+    [manager addFilmWithName:@"东成西就2011" 
+                   imageName:@"4.jpg" 
+                    director:@"刘镇伟 区雪儿" 
                    actorList:[NSArray arrayWithObjects:@"陈奕迅",@"莫文蔚",@"郑伊健", @"房祖名",@"方力申",@"黄奕", nil] 
                        price:28 value:60];
 
     
-    [manager addFilmWithName:@"丁丁历险记：独角兽号的秘密" imageName:@"1.jpg" director:@"史蒂文·斯皮尔伯格" 
+    [manager addFilmWithName:@"丁丁历险记：独角兽号的秘密" 
+                   imageName:@"1.jpg" director:@"史蒂文·斯皮尔伯格" 
                    actorList:[NSArray arrayWithObjects:@"杰米·贝尔",@"安迪·瑟金斯",@"西蒙·佩吉", nil] 
                        price:28 value:60];
     
-    [manager addFilmWithName:@"三傻大闹宝莱坞" imageName:@"2.jpg" director:@"拉库马·希拉尼" 
+    [manager addFilmWithName:@"三傻大闹宝莱坞" 
+                   imageName:@"2.jpg" 
+                    director:@"拉库马·希拉尼" 
                    actorList:[NSArray arrayWithObjects:@"阿米尔·汗",@"马德哈万 ",@"沙尔曼·乔什吉", nil] 
                        price:28 value:60];
     
 
-    [manager addFilmWithName:@"不怕贼惦记" imageName:@"3.jpg" director:@"许传海" 
+    [manager addFilmWithName:@"不怕贼惦记" 
+                   imageName:@"3.jpg" 
+                    director:@"许传海" 
                    actorList:[NSArray arrayWithObjects:@"岳秀清",@"吴刚", @"张斌",@"应采儿",@"张馨予", nil] 
                        price:28 value:60];
         
-    [manager addFilmWithName:@"午夜凶梦" imageName:@"5.jpg" director:@"叶伟英" 
+    [manager addFilmWithName:@"午夜凶梦" 
+                   imageName:@"5.jpg" 
+                    director:@"叶伟英" 
                    actorList:[NSArray arrayWithObjects:@"钟欣桐 ",@"周显欣",@"黄维德", nil] 
                        price:28 value:60];
     
     
-    [manager addFilmWithName:@"婚前试爱" imageName:@"6.jpg" director:@"叶念琛" 
+    [manager addFilmWithName:@"婚前试爱"
+                   imageName:@"6.jpg" 
+                    director:@"叶念琛" 
                    actorList:[NSArray arrayWithObjects:@"周秀娜",@"罗仲谦",@"洪天明",@"庄思敏",@"杨梓瑶",@"沈志明", nil] 
                        price:28 value:60];
     [manager addFilmWithName:@"巨额交易" imageName:@"7.jpg" director:@"马俪文" 
