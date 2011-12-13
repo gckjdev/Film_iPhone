@@ -83,6 +83,7 @@
     [self setDownloadNavigationTitle:@"电影院"];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[CinemaManager defaultManager] removeAllCinemas];
     [GlobalGetCinemaService() updateCinemaListWithCity:@"广州" delegate:self];
     self.dataList = [[CinemaManager defaultManager] cinemaList];
 }

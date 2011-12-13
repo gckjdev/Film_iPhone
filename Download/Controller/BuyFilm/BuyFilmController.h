@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "PPTableViewController.h"
-
-@interface BuyFilmController : PPTableViewController
+#import "UIBlankView.h"
+@class Film;
+@interface BuyFilmController : PPTableViewController<UITextFieldDelegate,UIBlankViewDelegate>
 {
     UITextField *filmNumber;
-    CGFloat filmPrice;
+    UILabel *priceLabel;
+    Film *_fiml;
+    NSInteger number;
+    
 }
 
-@property(nonatomic, retain) UITextField *filmNumber;
-@property(nonatomic, assign) CGFloat filmPrice;
+@property(nonatomic, retain) Film *film;
+
+-(id)initWithFilm:(Film *)film;
 @end

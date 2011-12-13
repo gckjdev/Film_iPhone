@@ -7,7 +7,7 @@
 //
 
 #import "CinemaManager.h"
-
+#import "Cinema.h"
 
 CinemaManager *cinemaManager;
 CinemaManager * GlobalGetCinemaManager()
@@ -44,6 +44,19 @@ CinemaManager * GlobalGetCinemaManager()
     if ([_cinemaList containsObject:cinema]) {
         [_cinemaList removeObject:cinema];
     }
+}
+
+-(void)addCinemaWithName:(NSString *)name address:(NSString *)address 
+               telNumber:(NSString*)telNumber
+{
+    Cinema *cinema = [[Cinema alloc]initWithCinemaId:[_cinemaList count] name:name address:address telNumber:telNumber];
+    [_cinemaList addObject:cinema];
+    [cinema release];
+}
+
+-(void)removeAllCinemas
+{
+    [_cinemaList removeAllObjects];
 }
 
 -(void)dealloc

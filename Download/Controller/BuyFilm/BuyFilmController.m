@@ -10,6 +10,8 @@
 #import "DownloadResource.h"
 #import "CinemaController.h"
 #import "UIUtils.h"
+#import "Film.h"
+
 enum{
     ROW_FILM_COUNT = 0,
     ROW_CINEMA_SELECTION,
@@ -21,15 +23,31 @@ enum{
 };
 
 @implementation BuyFilmController
-@synthesize filmNumber;
-@synthesize filmPrice;
+@synthesize film = _fiml;
+
+
+-(id)initWithFilm:(Film *)film
+{
+    self = [super init];
+    if (self) {
+        self.film = film;
+    }
+    return self;
+}
+
+
+-(void)dealloc
+{
+    [_fiml release];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        filmNumber = [[UITextField alloc] initWithFrame:CGRectMake(200, 10, 80, 30)];
+        filmNumber = [[UITextField alloc] initWithFrame:CGRectMake(200, 10, 70, 30)];
+        priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 210, 30)];
+        number = 1;
     }
     return self;
 }
@@ -50,29 +68,62 @@ enum{
     return ROW_COUNT;
 }
 
+
+- (void)refixFilmNumberLabel
+{
+    filmNumber.text = [NSString stringWithFormat:@"%d",number];
+}
+
 -(void)setFilmNumberCell:(UITableViewCell *)cell
 {
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(10, 10, 280, 30);
     label.text = @"票数";
     label.backgroundColor = [UIColor clearColor];
-    filmNumber.text = @"1";
-    filmNumber.borderStyle = UITextBorderStyleBezel;
     [cell.contentView addSubview:label];
     [label release];
+    filmNumber.borderStyle = UITextBorderStyleBezel;
+    filmNumber.keyboardType = UIKeyboardTypeNumberPad;
+    filmNumber.clearsOnBeginEditing = YES;
+    [self refixFilmNumberLabel];
     [cell.contentView addSubview:filmNumber];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+
+}
+
+-(void)updatePriceLabel
+{
+    priceLabel.text = [NSString stringWithFormat:
+                       @"%.1f X %d = %.1f 元",
+                       _fiml.price, number, _fiml.price * number];
 }
 
 -(void)setPriceCell:(UITableViewCell *)cell
 {
-    UILabel *label = [[UILabel alloc] init];
-    label.frame = CGRectMake(10, 10, 280, 30);
-    filmPrice = 28;
-    label.text = [NSString stringWithFormat:@"票价:    %.1f X %d = %.1f 元",filmPrice, 2, 56.0];
-    label.backgroundColor = [UIColor clearColor];
 
+    [self updatePriceLabel];
+    priceLabel.backgroundColor = [UIColor clearColor];
+    priceLabel.textAlignment = UITextAlignmentRight;
+    [cell.contentView addSubview:priceLabel];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 50, 30)];
+    label.text = @"票价:";
+    label.backgroundColor = [UIColor clearColor];
     [cell.contentView addSubview:label];
     [label release];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+}
+
+-(void)setPayCell:(UITableViewCell *)cell
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(10, 10, 280, 30);
+    label.text = @"确认支付";
+    label.backgroundColor = [UIColor clearColor];
+    [cell.contentView addSubview:label];
+    [label release];
+
 }
 
 -(void)setCallLabel:(UITableViewCell *)cell
@@ -83,7 +134,7 @@ enum{
     label.text = @"电话预订";
     [cell.contentView addSubview:label];
     [label release];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
 
 }
 
@@ -95,7 +146,20 @@ enum{
     [label setBackgroundColor:[UIColor clearColor]];
     [cell.contentView addSubview:label];
     [label release];
+
+}
+
+-(void)setSeatSelectionCell:(UITableViewCell *)cell 
+{
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 260, 30)];
+    [label setText:@"选择座位"];
+    [label setTextColor:[UIColor blackColor]];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [cell.contentView addSubview:label];
+    [label release];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -106,6 +170,8 @@ enum{
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] init] autorelease];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     switch (indexPath.row) {
         case ROW_FILM_COUNT:
         {
@@ -119,6 +185,7 @@ enum{
         }
         case ROW_SEAT_SELECTION:
         {
+            [self setSeatSelectionCell:cell];
             break;
         }
         case ROW_PRICE_DISPLAY:
@@ -128,6 +195,7 @@ enum{
         }
         case ROW_FILM_PAY:
         {
+            [self setPayCell:cell];
             break;
         }
         case ROW_CALL:
@@ -140,11 +208,7 @@ enum{
     }
     return cell;
     
-//    ROW_CINEMA_SELECTION,
-//    ROW_SEAT_SELECTION,
-//    ROW_PRICE_DISPLAY,
-//    ROW_FILM_PAY,
-//    ROW_CALL,
+
     
 }
 
@@ -191,6 +255,30 @@ enum{
     }
 }
 
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return _fiml.name;
+}
+
+#pragma mark - textfield delegate
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    number = [textField.text integerValue];
+    [self updatePriceLabel];
+    return YES;
+}
+
+#pragma mark - blacnk view delegate
+
+- (void)didClickBlankView
+{
+    number = [filmNumber.text integerValue];
+    [self refixFilmNumberLabel];
+    [self updatePriceLabel];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -207,6 +295,13 @@ enum{
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self addBlankView:95 currentResponder:filmNumber];
+    [self setBlankViewDelegate:self];
+    [super viewDidAppear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

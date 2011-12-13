@@ -18,5 +18,8 @@
 +(CinemaManager *)defaultManager;
 -(void)addCinema:(Cinema *)cinema;
 -(void)removeCinema:(Cinema *)cinema;
+-(void)removeAllCinemas;
+-(void)addCinemaWithName:(NSString *)name address:(NSString *)address 
+               telNumber:(NSString*)telNumber;
 @end
 extern CinemaManager *GlobalGetCinemaManager();

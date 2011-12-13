@@ -60,9 +60,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BuyFilmController *buyFilmController = [[BuyFilmController alloc] init];
-    [self.navigationController pushViewController:buyFilmController animated:YES];
-    [buyFilmController release];
+    Film *film = [dataList objectAtIndex:indexPath.row];
+    if (film) {
+        BuyFilmController *buyFilmController = [[BuyFilmController alloc] initWithFilm:film];
+        [self.navigationController pushViewController:buyFilmController animated:YES];
+        [buyFilmController release];
+    }
 }
 #pragma mark - View lifecycle
 

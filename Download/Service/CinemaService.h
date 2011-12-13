@@ -15,10 +15,12 @@
 @end
 
 #import <Foundation/Foundation.h>
+//#import "MSearch.h"
+#import "CommonService.h"
 
-@interface CinemaService : NSObject
+@interface CinemaService : CommonService//<MSearchDelegate>
 {
-    
+ //   MSearch *_search;
 }
 -(void)updateCinemaListWithCity:(NSString *)city delegate:(id<CinemaServiceDelegate>) delegate;
 
