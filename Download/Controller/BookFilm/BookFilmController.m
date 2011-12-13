@@ -12,9 +12,11 @@
 #import "FilmManager.h"
 #import "FilmService.h"
 #import "BuyFilmController.h"
+#import "UIViewController+DownloadViewControllerAddition.h"
 
 @implementation BookFilmController
-
+@synthesize type;
+@synthesize cinema;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,6 +26,26 @@
     return self;
 }
 
+-(id)initWithType:(NSInteger)aType cinema:(Cinema *)aCinema;
+{
+    self = [super init];
+    if (self) {
+        self.type = aType;
+        self.cinema = aCinema;
+    }
+    return self;
+}
+
+-(id)init
+{
+    return [self initWithType:BOOK_FILM_NORMAL cinema:nil];
+}
+
+-(void)dealloc
+{
+    [cinema release];
+    [super dealloc];
+}
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -63,6 +85,11 @@
     Film *film = [dataList objectAtIndex:indexPath.row];
     if (film) {
         BuyFilmController *buyFilmController = [[BuyFilmController alloc] initWithFilm:film];
+        if (self.cinema) {
+            buyFilmController.cinema = self.cinema;
+            buyFilmController.hasConstCinema = YES;
+        }
+
         [self.navigationController pushViewController:buyFilmController animated:YES];
         [buyFilmController release];
     }
@@ -74,7 +101,9 @@
     [self setBackgroundImageName:DOWNLOAD_BG];
     [self setDownloadNavigationTitle:self.tabBarItem.title];
     [super viewDidLoad];
-
+    if (type == BOOK_FILM_SHOW) {
+        [self setBackButton];
+    }
     
     [GlobalGetFilmService() updateFilmList]; 
     self.dataList = [[FilmManager defaultManager] filmList];

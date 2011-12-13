@@ -8,6 +8,8 @@
 
 #import "BookFilmCell.h"
 #import "Film.h"
+#import "DownloadResource.h"
+
 @implementation BookFilmCell
 
 @synthesize filmName;
@@ -26,9 +28,12 @@
         return nil;
     }
     
-    ((BookFilmCell*)[topLevelObjects objectAtIndex:0]).delegate = delegate;
-    
-    return (BookFilmCell*)[topLevelObjects objectAtIndex:0];
+    BookFilmCell* cell = ((BookFilmCell*)[topLevelObjects objectAtIndex:0]);
+    cell.delegate = delegate;
+    UIImageView *bgView = [[UIImageView alloc]initWithImage:RESOURCE_CELL_BG_IMAGE];
+    cell.backgroundView = bgView;
+    [bgView release];
+    return cell;
 }
 
 + (NSString*)getCellIdentifier
@@ -38,7 +43,7 @@
 
 + (CGFloat)getCellHeight
 {
-    return 182.0f;
+    return 184.0f;
 }
 
 

@@ -14,6 +14,8 @@
 
 #import "BookFilmController.h"
 #import "CinemaController.h"
+#import "HelpController.h"
+
 //#import "DownloadManageController.h"
 //#import "TopDownloadController.h"
 //#import "ResourceCategoryController.h"
@@ -104,7 +106,7 @@ enum TAB_INDEX {
               hasNavController:YES			
                viewControllers:controllers];
 
-	[UIUtils addViewController:[BookFilmController alloc]
+	[UIUtils addViewController:[HelpController alloc]
 					 viewTitle:@"帮助"
 					 viewImage:ABOUT_ICON
 			  hasNavController:YES			

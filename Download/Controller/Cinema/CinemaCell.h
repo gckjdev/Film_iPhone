@@ -11,7 +11,9 @@
 
 @class Cinema;
 @interface CinemaCell : PPTableViewCell
-
+{
+    Cinema *_cinema;
+}
 + (CinemaCell*)createCell:(id)delegate;
 + (NSString*)getCellIdentifier;
 + (CGFloat)getCellHeight;
@@ -19,4 +21,9 @@
 @property (retain, nonatomic) IBOutlet UILabel *cinemaName;
 @property (retain, nonatomic) IBOutlet UIButton *telNumber;
 @property (retain, nonatomic) IBOutlet UILabel *cinemaAddress;
+@property (retain, nonatomic) Cinema *cinema;
+@property (retain, nonatomic) IBOutlet UIButton *makeCallButton;
+
+- (IBAction)clickTel:(id)sender;
+
 @end

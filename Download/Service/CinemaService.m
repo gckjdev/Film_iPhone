@@ -32,10 +32,11 @@ CinemaService *GlobalGetCinemaService()
 //    MPOISEARCHOPTIONS a;
 //    
 //    [_search PoiSearchByKeywords:@"电影院" City:city Options:a];
+
+    CinemaManager *manager = [CinemaManager defaultManager];
+    [manager addCinemaWithName:@"华南影都" address:@"环市西路133路华南影都D区2层" telNumber:@"020-28340088"];
+    [manager addCinemaWithName:@"上影联和电影城" address:@"江燕路108号燕汇广场4层" telNumber:@"020-89778118"];    
     
-    Cinema *cinema = [[Cinema alloc] initWithCinemaId:1 name:@"上影联和电影城" address:@"江燕路108号燕汇广场4层" telNumber:@"020-89778118"];
-    [[CinemaManager defaultManager] addCinema:cinema];
-    [cinema release];
 }
 
  

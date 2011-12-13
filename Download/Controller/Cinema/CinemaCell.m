@@ -8,11 +8,14 @@
 
 #import "CinemaCell.h"
 #import "Cinema.h"
+#import "UIUtils.h"
+#import "DownloadResource.h"
 @implementation CinemaCell
 @synthesize cinemaName;
 @synthesize telNumber;
 @synthesize cinemaAddress;
-
+@synthesize cinema = _cinema;
+@synthesize makeCallButton;
 
 + (CinemaCell*)createCell:(id)delegate
 {
@@ -22,10 +25,12 @@
         NSLog(@"create <CinemaCell> but cannot find cell object from Nib");
         return nil;
     }
-    
-    ((CinemaCell*)[topLevelObjects objectAtIndex:0]).delegate = delegate;
-    
-    return (CinemaCell*)[topLevelObjects objectAtIndex:0];
+    CinemaCell *cell = [topLevelObjects objectAtIndex:0];
+    cell.delegate = delegate;
+    UIImageView *bgView = [[UIImageView alloc]initWithImage:RESOURCE_CELL_BG_IMAGE];
+    cell.backgroundView = bgView;
+    [bgView release];
+    return cell;
 }
 
 + (NSString*)getCellIdentifier
@@ -35,16 +40,17 @@
 
 + (CGFloat)getCellHeight
 {
-    return 80.0f;
+    return 85.0f;
 }
 
 
 - (void)setCellInfo:(Cinema *)cinema
 {
+    self.cinema = cinema;
     self.cinemaName.text = [NSString stringWithFormat:@"名称: %@", cinema.name];
     self.cinemaAddress.text = [NSString stringWithFormat:@"地址: %@", cinema.address];
     [self.telNumber setTitle:[NSString stringWithFormat:@"电话: %@", cinema.telNumber] forState:UIControlStateNormal];
-    
+    [self.makeCallButton setBackgroundImage:ACTION_BUTTON_IMAGE forState:UIControlStateNormal];
 }
 
 - (void)dealloc {
@@ -52,8 +58,14 @@
     [cinemaName release];
     [cinemaAddress release];
     [telNumber release];
+    [_cinema release];
+    [makeCallButton release];
     [super dealloc];
 }
 
 
+- (IBAction)clickTel:(id)sender {
+    NSString *tel = [NSString stringWithFormat:@"tel://%@",_cinema.telNumber];
+    [UIUtils makeCall:tel];
+}
 @end
