@@ -38,7 +38,7 @@ CinemaService *GlobalGetCinemaService()
     [cinema release];
 }
 
-
+ 
 
 
 //-(void) showPoi:(MPOI *)poi
