@@ -33,9 +33,128 @@ CinemaService *GlobalGetCinemaService()
 //    
 //    [_search PoiSearchByKeywords:@"电影院" City:city Options:a];
     
-    Cinema *cinema = [[Cinema alloc] initWithCinemaId:1 name:@"上影联和电影城" address:@"江燕路108号燕汇广场4层" telNumber:@"020-89778118"];
-    [[CinemaManager defaultManager] addCinema:cinema];
-    [cinema release];
+    Cinema *cinema1 = [[Cinema alloc] initWithCinemaId:1 name:@"上影联和电影城" address:@"江燕路108号燕汇广场4层" telNumber:@"020-89778118"];
+    
+    Cinema *cinema2 = [[Cinema alloc] initWithCinemaId:2 name:@"华南影都" address:@"环市西路133路华南影都D区2层" telNumber:@"020-28340088"];
+    
+    Cinema *cinema3 = [[Cinema alloc] initWithCinemaId:3 name:@"青宫电影城" address:@"北京路动感328" telNumber:@"020-83328233  020-83329918  020-83322688"];
+    
+    Cinema *cinema4 = [[Cinema alloc] initWithCinemaId:4 name:@"榕泉影剧院" address:@"文明路65号" telNumber:@"020-83372923"];
+    
+    
+    
+    
+    Cinema *cinema5 = [[Cinema alloc] initWithCinemaId:5 name:@"羊城电影院" address:@"长堤大马路248号" telNumber:@"020-83347984"];
+    
+    Cinema *cinema6 = [[Cinema alloc] initWithCinemaId:6 name:@"五月花电影城" address:@"中山五路68号五月花商业广场6层" telNumber:@"020-83330836;020-83331003;020-83337366"];
+    
+    Cinema *cinema7 = [[Cinema alloc] initWithCinemaId:7 name:@"太古仓电影库" address:@"革新路124之6-7" telNumber:@"020-84309788"];
+    
+    Cinema *cinema8 = [[Cinema alloc] initWithCinemaId:8 name:@"上影联和电影城" address:@"江燕路108号燕汇广场4层" telNumber:@"020-89778118"];
+    
+    
+    
+    
+    Cinema *cinema9 = [[Cinema alloc] initWithCinemaId:9 name:@"飞扬影城(天河城)" address:@"天河路208号天河城4层" telNumber:@"020-85590336;020-85596002;020-85591013"];
+
+    Cinema *cinema10 = [[Cinema alloc] initWithCinemaId:10 name:@"中影火山湖电影城" address:@"农林下路4-6号锦轩现代城4层" telNumber:@"020-87623868"];
+    
+    Cinema *cinema11= [[Cinema alloc] initWithCinemaId:11 name:@"员村文化宫电影院库" address:@"员村二横路2" telNumber:@"020-85533391"];
+
+    Cinema *cinema12 = [[Cinema alloc] initWithCinemaId:12 name:@"粤艺影院" address:@"桂花岗一街" telNumber:@"020-83337061"];
+    
+    
+
+    Cinema *cinema13 = [[Cinema alloc] initWithCinemaId:13 name:@"东山八一电影院" address:@"达道路16" telNumber:@"020-83330721"];
+
+    Cinema *cinema14 = [[Cinema alloc] initWithCinemaId:14 name:@"花都数字电影城" address:@"新华路30号" telNumber:@"020-86832440"];
+    
+    Cinema *cinema15 = [[Cinema alloc] initWithCinemaId:15 name:@"沙河影剧场" address:@"沙河横马路37号" telNumber:@"020-87738713"];
+
+    Cinema *cinema16 = [[Cinema alloc] initWithCinemaId:16 name:@"儿童电影院" address:@"海珠中路249号" telNumber:@"020-81375050"];
+    
+    
+
+    Cinema *cinema17 = [[Cinema alloc] initWithCinemaId:17 name:@"摩登电影城" address:@"东圃大马路14" telNumber:@"020-62861010"];
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    [[CinemaManager defaultManager] addCinema:cinema1];
+    [[CinemaManager defaultManager] addCinema:cinema2];
+    [[CinemaManager defaultManager]  addCinema:cinema3];
+    [[CinemaManager defaultManager]  addCinema:cinema4];
+    
+    [[CinemaManager defaultManager] addCinema:cinema5];
+    [[CinemaManager defaultManager] addCinema:cinema6];
+    [[CinemaManager defaultManager]  addCinema:cinema7];
+    [[CinemaManager defaultManager]  addCinema:cinema8];
+
+    
+    [[CinemaManager defaultManager] addCinema:cinema9];
+    [[CinemaManager defaultManager] addCinema:cinema10];
+    [[CinemaManager defaultManager]  addCinema:cinema11];
+    [[CinemaManager defaultManager]  addCinema:cinema12];
+
+    
+    [[CinemaManager defaultManager] addCinema:cinema13];
+    [[CinemaManager defaultManager] addCinema:cinema14];
+    [[CinemaManager defaultManager]  addCinema:cinema15];
+    [[CinemaManager defaultManager]  addCinema:cinema16];
+    
+    
+    [[CinemaManager defaultManager]  addCinema:cinema17];
+
+
+    
+
+  
+
+    [cinema1 release];
+    [cinema2 release];
+    [cinema3 release];
+    [cinema4 release];
+    
+    
+    [cinema5 release];
+    [cinema6 release];
+    [cinema7 release];
+    [cinema8 release];
+    
+    [cinema9 release];
+    [cinema10 release];
+    [cinema11 release];
+    [cinema12 release];
+    
+    
+    [cinema13 release];
+    [cinema14 release];
+    [cinema15 release];
+    [cinema16 release];
+    
+    
+    [cinema17 release];
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
  
