@@ -47,7 +47,7 @@
 - (void)setCellInfo:(Cinema *)cinema
 {
     self.cinema = cinema;
-    self.cinemaName.text = [NSString stringWithFormat:@"名称: %@", cinema.name];
+    self.cinemaName.text = [NSString stringWithFormat:@"%@", cinema.name];
     self.cinemaAddress.text = [NSString stringWithFormat:@"地址: %@", cinema.address];
     [self.telNumber setTitle:[NSString stringWithFormat:@"电话: %@", cinema.telNumber] forState:UIControlStateNormal];
     [self.makeCallButton setBackgroundImage:ACTION_BUTTON_IMAGE forState:UIControlStateNormal];

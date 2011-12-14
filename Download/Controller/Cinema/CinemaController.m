@@ -146,7 +146,6 @@
     self.dataList = [[CinemaManager defaultManager] cinemaList];
     
     if (_pickType == CINEMA_PICKER) {
-        //[self setNavigationRightButtonWithSystemStyle:UIBarButtonSystemItemDone action:@selector(clickDone)];
         [self setDownloadRightBarButton:@"    确定    " selector:@selector(clickDone)];
         [self setBackButton];
 
