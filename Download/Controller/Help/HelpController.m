@@ -15,7 +15,7 @@ enum
 };
 
 #define USAGE_CELL_HEIGHT 155
-#define PAYMENT_CELL_HEIGHT 155
+#define PAYMENT_CELL_HEIGHT 175
 #define CALL_CELL_HEIGHT 44
 #import "HelpController.h"
 #import "DownloadResource.h"
@@ -81,7 +81,7 @@ enum
     label.backgroundColor = [UIColor clearColor];
     label.textColor = CELL_TEXT_COLOR;
     
-    label.text = @"银联支付: 倘若开通了网上银行，可以选择银联支付进入银联支付页面，然后选择支付银行，输入账户密码即可支付。\n\n电话支付: 倘若办理了电话支付业务，可以直接点击”电话支付“进入电话支付。\n\n电话预订:直接拨打12580进行电话语音订票系统进行订票。";
+    label.text = @"银联支付: 银联支付银行（借记卡）有：广东省内开户的建设银行、农业银行、招商银行、华夏银行、邮政储蓄、交通银行、广州银行(商业银行)、中信银行、广发银行等(无需开通网银)。 \n\n手机支付: 手机支付仅适用于广东全球通用户，手机支付额度查询：发送”HFED”到106586633查询当前的话费支付额度，发送”CXYE”到106586633查询本月剩余的可消费额度。";
     [label setFont:[UIFont systemFontOfSize:12]];
     
     [label setNumberOfLines:0];
@@ -171,7 +171,7 @@ enum
         case HELP_PAYMENT:
             return @"支付帮助";
         case HELP_CALL:
-            return @"电话预订";
+            return @"人工帮助";
         default:
             return @"其他";
             break;

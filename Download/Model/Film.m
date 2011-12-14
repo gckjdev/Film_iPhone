@@ -32,7 +32,7 @@
         self.value = aValue;
         self.image = aImage;
         if (aValue > 0) {
-            self.debate = aPrice/aValue;
+            self.debate = (aPrice/aValue) * 10.0;
         }else{
             self.debate = 0;
         }

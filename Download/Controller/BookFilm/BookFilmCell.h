@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PPTableViewCell.h"
 #import "Film.h"
+
+@class OHAttributedLabel;
+
 @interface BookFilmCell : PPTableViewCell
 {
     
@@ -20,8 +23,8 @@
 @property (retain, nonatomic) IBOutlet UILabel *filmName;
 @property (retain, nonatomic) IBOutlet UILabel *director;
 @property (retain, nonatomic) IBOutlet UILabel *actors;
-@property (retain, nonatomic) IBOutlet UILabel *price;
-@property (retain, nonatomic) IBOutlet UILabel *debate;
+@property (retain, nonatomic) IBOutlet OHAttributedLabel *price;
+@property (retain, nonatomic) IBOutlet OHAttributedLabel *debate;
 @property (retain, nonatomic) IBOutlet UIImageView *poster;
 
 @end
