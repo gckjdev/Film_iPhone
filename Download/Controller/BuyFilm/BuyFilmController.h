@@ -21,10 +21,13 @@
     NSInteger number;
     UILabel *cinemaLabel;
     UILabel *seatLabel;    
+    NSSet *selectSeatNumberList;
 }
 
 @property(nonatomic, retain) Film *film;
 @property(nonatomic, retain) Cinema *cinema;
 @property(nonatomic, assign) BOOL hasConstCinema;
+@property(nonatomic, retain) NSSet *selectSeatNumberList;
+
 -(id)initWithFilm:(Film *)film;
 @end

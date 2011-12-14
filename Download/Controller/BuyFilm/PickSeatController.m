@@ -9,14 +9,30 @@
 #import "PickSeatController.h"
 #import "DownloadResource.h"
 #import "UIViewController+DownloadViewControllerAddition.h"
+#import "Seat.h"
+#import "SeatManager.h"
+#import "SeatService.h"
 
 @implementation PickSeatController
 @synthesize delegate;
+@synthesize cinema = _cinema;
+@synthesize film = _film;
+@synthesize selectedSeatSet = _selectedSeatSet;
+
+-(void)dealloc
+{
+    [_film release];
+    [_cinema release];
+    [_selectedSeatSet release];
+    [super release];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _selectedSeatSet = [[NSMutableSet alloc] init];
     }
     return self;
 }
@@ -32,6 +48,19 @@
     }
     return self;
 }
+
+-(id)initWithFilm:(Film *)film cinema:(Cinema *)cinema
+{
+    self = [super init];
+    if (self) {
+        _filmCount = 10000000;
+        _currentCount = 0;
+        self.film = film;
+        self.cinema = cinema;
+    }
+    return self;
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -42,11 +71,14 @@
 
 #define SCROLL_VIEW_TAG 1234
 #define COUNT_PER_ROW 6
-- (void)createButtonsWithAction:(SEL)action count:(NSInteger)count
+- (void)createButtonsWithAction:(SEL)action seat:(Seat *)seat
 {
-    if (count == 0) {
+    
+    if (seat == nil) {
         return;
     }
+
+    NSInteger count = seat.size;
     
     [[self.view viewWithTag:SCROLL_VIEW_TAG] removeFromSuperview];
 
@@ -55,22 +87,31 @@
 
         UIButton* button = [[UIButton alloc] initWithFrame:CGRectMake(160, 160, 50, 32)];
         [button.titleLabel setFont:[UIFont systemFontOfSize:12]];
-        NSInteger row = i / COUNT_PER_ROW + 1;
-        NSInteger number = i % COUNT_PER_ROW + 1;
+        NSInteger row = i / seat.numberPerRow + 1;
+        NSInteger number = i % seat.numberPerRow + 1;
         NSString *title = [NSString stringWithFormat:@"%d排%d号",row, number];
         
         [button setTitle:title forState:UIControlStateNormal];
         
         [button setBackgroundImage:[UIImage imageNamed:@"set2.png"] 
                           forState:UIControlStateNormal];
-        [button setBackgroundImage:[UIImage imageNamed:@"set.png"] forState:UIControlStateSelected];
+
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTag:i];
-        if ( i % 2 == rand()%3) {
+        
+        NSNumber *currentNumber = [NSNumber numberWithInt:i];
+        
+        if ([seat.selectedSet containsObject:currentNumber]) {
             button.selected = YES;
             button.userInteractionEnabled = NO;
+            [button setBackgroundImage:[UIImage imageNamed:@"set.png"] forState:UIControlStateSelected];
+        }else{
+            button.selected = [_selectedSeatSet containsObject:currentNumber];
+            [button setBackgroundImage:[UIImage imageNamed:@"set3.png"] forState:UIControlStateSelected];
         }
+        
+        
         [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
         [buttonArray addObject:button];
         [button release];
@@ -95,11 +136,14 @@
         return;
     }
     UIButton *button = (UIButton *)sender;
+    NSNumber *number = [NSNumber numberWithInt:button.tag];
     if (button.isSelected) {
         button.selected = NO;
         _currentCount --;
+        [_selectedSeatSet removeObject:number];
     }else{
         button.selected = YES;
+        [_selectedSeatSet addObject:number];
         _currentCount ++;
     }
 }
@@ -107,7 +151,7 @@
 -(void)clickDone
 {
     if (delegate&&[delegate respondsToSelector:@selector(didPickSeat:)]) {
-        [delegate didPickSeat:_currentCount];
+        [delegate didPickSeat:_selectedSeatSet];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -119,11 +163,18 @@
     [self setBackgroundImageName:DOWNLOAD_BG];
     [self setDownloadNavigationTitle:@"选座"];  
 
-    [self setDownloadRightBarButton:@"确定" selector:@selector(clickDone)];
+    [self setDownloadRightBarButton:@"    确定    " selector:@selector(clickDone)];
     [self setBackButton];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createButtonsWithAction:@selector(pickSeat:) count:60];
+    [GlobalGetSeatService() updateSeatListWithFilm:self.film cinema:self.cinema delegate:nil];
+    
+    Seat *seat = [[SeatManager defaultManager] getSeatByFilm:_film cinema:_cinema];
+    
+    [self createButtonsWithAction:@selector(pickSeat:) seat:seat];
+    
+    
+    
 }
 
 - (void)viewDidUnload

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA155C7C149846380040C5BD /* set3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA155C7B149846380040C5BD /* set3@2x.png */; };
+		CA155C80149847420040C5BD /* Seat.m in Sources */ = {isa = PBXBuildFile; fileRef = CA155C7F149847420040C5BD /* Seat.m */; };
+		CA155C83149849190040C5BD /* SeatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA155C82149849190040C5BD /* SeatManager.m */; };
+		CA155C8614984B340040C5BD /* SeatService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA155C8514984B340040C5BD /* SeatService.m */; };
 		CA19F0DA1484CDB900CDF114 /* DownloadResource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA19F0D91484CDB900CDF114 /* DownloadResource.m */; };
 		CA19F1411484DACE00CDF114 /* png_08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA19F0E01484DACE00CDF114 /* png_08@2x.png */; };
 		CA19F1421484DACE00CDF114 /* png_102@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA19F0E11484DACE00CDF114 /* png_102@2x.png */; };
@@ -481,6 +485,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA155C7B149846380040C5BD /* set3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set3@2x.png"; sourceTree = "<group>"; };
+		CA155C7E149847420040C5BD /* Seat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seat.h; sourceTree = "<group>"; };
+		CA155C7F149847420040C5BD /* Seat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seat.m; sourceTree = "<group>"; };
+		CA155C81149849190040C5BD /* SeatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatManager.h; sourceTree = "<group>"; };
+		CA155C82149849190040C5BD /* SeatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatManager.m; sourceTree = "<group>"; };
+		CA155C8414984B330040C5BD /* SeatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatService.h; sourceTree = "<group>"; };
+		CA155C8514984B340040C5BD /* SeatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatService.m; sourceTree = "<group>"; };
 		CA19F0D81484CDB900CDF114 /* DownloadResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadResource.h; sourceTree = "<group>"; };
 		CA19F0D91484CDB900CDF114 /* DownloadResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadResource.m; sourceTree = "<group>"; };
 		CA19F0E01484DACE00CDF114 /* png_08@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_08@2x.png"; sourceTree = "<group>"; };
@@ -1648,6 +1659,8 @@
 				CAE433871495BA08006397FE /* FilmService.m */,
 				CA63C73B1495EC9200DA8ED2 /* CinemaService.h */,
 				CA63C73C1495EC9200DA8ED2 /* CinemaService.m */,
+				CA155C8414984B330040C5BD /* SeatService.h */,
+				CA155C8514984B340040C5BD /* SeatService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1655,6 +1668,7 @@
 		CAE433891495D03E006397FE /* film_pics */ = {
 			isa = PBXGroup;
 			children = (
+				CA155C7B149846380040C5BD /* set3@2x.png */,
 				CAC611E514974AF500C30C60 /* PhonePay.png */,
 				CAC611E11497459000C30C60 /* telephone.png */,
 				CAC611E21497459000C30C60 /* unionPay.png */,
@@ -2559,6 +2573,10 @@
 				CA63C7361495E91A00DA8ED2 /* Cinema.m */,
 				CA63C7381495EAAD00DA8ED2 /* CinemaManager.h */,
 				CA63C7391495EAAD00DA8ED2 /* CinemaManager.m */,
+				CA155C7E149847420040C5BD /* Seat.h */,
+				CA155C7F149847420040C5BD /* Seat.m */,
+				CA155C81149849190040C5BD /* SeatManager.h */,
+				CA155C82149849190040C5BD /* SeatManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2914,6 +2932,7 @@
 				CAC611E41497459100C30C60 /* unionPay.png in Resources */,
 				CAC611E614974AF600C30C60 /* PhonePay.png in Resources */,
 				CAC611F514977E7F00C30C60 /* HelpController.xib in Resources */,
+				CA155C7C149846380040C5BD /* set3@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3169,6 +3188,9 @@
 				CAC611D71496F6E300C30C60 /* PickSeatController.m in Sources */,
 				CAC611EA1497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m in Sources */,
 				CAC611F414977E7F00C30C60 /* HelpController.m in Sources */,
+				CA155C80149847420040C5BD /* Seat.m in Sources */,
+				CA155C83149849190040C5BD /* SeatManager.m in Sources */,
+				CA155C8614984B340040C5BD /* SeatService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

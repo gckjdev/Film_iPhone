@@ -27,6 +27,7 @@ enum{
 @synthesize film = _fiml;
 @synthesize cinema;
 @synthesize hasConstCinema;
+@synthesize selectSeatNumberList;
 
 -(id)initWithFilm:(Film *)film
 {
@@ -45,6 +46,7 @@ enum{
     [priceLabel release];
     [cinemaLabel release];
     [cinema release];
+    [selectSeatNumberList release];
     [super release];
 }
 
@@ -339,7 +341,10 @@ enum{
         case ROW_SEAT_SELECTION:
         {
             if (self.cinema) {
-                PickSeatController *pc = [[PickSeatController alloc] initWithFilmCount:number];
+                PickSeatController *pc = [[PickSeatController alloc] initWithFilm:self.film cinema:self.cinema];
+                if (selectSeatNumberList) {
+                    pc.selectedSeatSet = [[[NSMutableSet alloc] initWithSet:selectSeatNumberList] autorelease];
+                }
                 [self.navigationController pushViewController:pc animated:YES];
                 pc.delegate = self;
                 [pc release];
@@ -381,12 +386,12 @@ enum{
 }
 
 #pragma mark -pick seat && cinema delegate
--(void)didPickSeat:(NSInteger )seatCount
+-(void)didPickSeat:(NSSet *)selectedSeatSet
 {
-    number = seatCount;
+    self.selectSeatNumberList = selectedSeatSet;
+    number = [selectedSeatSet count];
     [self updatePriceLabel];
     [self refixFilmNumberLabel];
-    number = seatCount;
     [self updateSeatSelectionLabel];
 }
 

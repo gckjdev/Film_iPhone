@@ -9,19 +9,28 @@
 
 @protocol PickSeatDelegate <NSObject>
 
--(void)didPickSeat:(NSInteger )seatCount;
+-(void)didPickSeat:(NSSet *)selectedSeatSet;
 
 @end
 
+@class Film;
+@class Cinema;
 #import <UIKit/UIKit.h>
 #import "PPViewController.h"
 @interface PickSeatController :PPViewController
 {
     NSInteger _filmCount;
     NSInteger _currentCount;
+    Film *_film;
+    Cinema *_cinema;
+    NSMutableSet *_selectedSeatSet;
 }
 
 @property(nonatomic, assign)id<PickSeatDelegate>delegate;
--(id)initWithFilmCount:(NSInteger)filmCount;
+@property(nonatomic, retain) Film *film;
+@property(nonatomic, retain) Cinema *cinema;
+@property(nonatomic, retain) NSMutableSet *selectedSeatSet;
 
+-(id)initWithFilmCount:(NSInteger)filmCount;
+-(id)initWithFilm:(Film *)film cinema:(Cinema *)cinema;
 @end
