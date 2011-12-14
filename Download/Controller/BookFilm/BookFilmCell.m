@@ -45,7 +45,7 @@
 - (void)setCellInfo:(Film *)film
 {
 
-    [film.actorList componentsJoinedByString:@" "];
+     [film.actorList componentsJoinedByString:@" "];
     self.filmName.text = [NSString stringWithFormat:@"%@: %@",@"电影名",film.name];
     self.director.text  = [NSString stringWithFormat:@"%@: %@",@"导演",film.director];
     self.actors.text  = [NSString stringWithFormat:@"%@: %@",@"主演",[film.actorList componentsJoinedByString:@"/"]];

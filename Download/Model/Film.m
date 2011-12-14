@@ -40,6 +40,41 @@
     return self;
 }
 
+
+//- (void) encodeWithCoder: (NSCoder *)coder  {
+//    
+//    
+//    
+//    [coder encodeObject:_name forKey:@"name"];
+//    [coder encodeObject:_director forKey:@"director"];
+//    [coder encodeObject:_actorList forKey:@"actorList"];
+//    [coder encodeInt:_price forKey:@"price"] ;
+//    [coder encodeInt:_value forKey:@"value"] ;
+//    [coder encodeObject:_image forKey:@"image"];
+//
+//        
+//}
+//
+//- (id)initWithCoder:(NSCoder *)decoder{
+//    
+//    
+//    if (self = [super init]) {
+//        
+//        self.name = [decoder decodeObjectForKey:@"name"]; 
+//        self.director = [decoder decodeObjectForKey:@"director"];
+//        self.actorList = [decoder decodeObjectForKey:@"actorList"];
+//        self.price = [decoder decodeIntForKey:@"price"];
+//        self.value = [decoder decodeIntForKey:@"value"];
+//        self.image = [decoder decodeObjectForKey:@"image"];
+//         
+//    }
+//    
+//    
+//    return self ;
+//
+//}
+
+
 -(void)dealloc
 {
     [_name release];
