@@ -9,6 +9,7 @@
 #import "BuyFilmController.h"
 #import "DownloadResource.h"
 #import "CinemaController.h"
+#import "HelpController.h"
 #import "UIUtils.h"
 #import "Film.h"
 #import "UIViewController+DownloadViewControllerAddition.h"
@@ -20,6 +21,7 @@ enum{
     ROW_PRICE_DISPLAY,
     ROW_FILM_PAY,
     ROW_CALL,
+    ROW_HELP,
     ROW_COUNT
 };
 
@@ -69,6 +71,7 @@ enum{
         number = 0;
         hasConstCinema = NO;
         [self setcellTextDefaultColor];
+        selectSeatNumberList = [[NSMutableSet alloc] init];
     }
     return self;
 }
@@ -119,7 +122,7 @@ enum{
 -(void)updatePriceLabel
 {
     if (number <= 0) {
-        priceLabel.text = @"     0 元";
+        priceLabel.text = @"     0  元";
     }else{
         priceLabel.text = [NSString stringWithFormat:
                            @"%.1f X %d = %.1f 元",
@@ -134,8 +137,8 @@ enum{
     priceLabel.backgroundColor = [UIColor clearColor];
     priceLabel.textAlignment = UITextAlignmentRight;
     [cell.contentView addSubview:priceLabel];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 50, 30)];
-    label.text = @"票价:";
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
+    label.text = @"票价合计";
     label.textColor = CELL_TEXT_COLOR;
     label.backgroundColor = [UIColor clearColor];
     [cell.contentView addSubview:label];
@@ -198,12 +201,12 @@ enum{
 {
     [UIUtils makeCall:@"tel://12580"];
 }
--(void)setCallLabel:(UITableViewCell *)cell
+-(void)setCallCell:(UITableViewCell *)cell
 {
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(10, 10, 280, 30);
     label.backgroundColor = [UIColor clearColor];
-    label.text = @"电话预订";
+    label.text = @"人工预订";
     label.textColor = CELL_TEXT_COLOR;
     [cell.contentView addSubview:label];
     [label release];
@@ -218,14 +221,25 @@ enum{
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-
+-(void)setHelpCell:(UITableViewCell *)cell
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(10, 10, 280, 30);
+    label.backgroundColor = [UIColor clearColor];
+    label.text = @"查看帮助";
+    label.textColor = CELL_TEXT_COLOR;
+    [cell.contentView addSubview:label];
+    [label release];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+}
 -(void)updateCinemaSelectionLabel
 {
     if (self.cinema != nil) {
         cinemaLabel.text = self.cinema.name;
         [cinemaLabel setTextAlignment:UITextAlignmentCenter];
     }else {
-        cinemaLabel.text = @"请选择电影院";
+        cinemaLabel.text = @"选择影院";
         [cinemaLabel setTextAlignment:UITextAlignmentLeft];
     }
     cinemaLabel.textColor = CELL_TEXT_COLOR;
@@ -300,7 +314,12 @@ enum{
             }
             case ROW_CALL:
             {
-                [self setCallLabel:cell];
+                [self setCallCell:cell];
+                break;
+            }
+            case ROW_HELP:
+            {
+                [self setHelpCell:cell];
                 break;
             }
             default:
@@ -342,9 +361,9 @@ enum{
         {
             if (self.cinema) {
                 PickSeatController *pc = [[PickSeatController alloc] initWithFilm:self.film cinema:self.cinema];
-                if (selectSeatNumberList) {
-                    pc.selectedSeatSet = [[[NSMutableSet alloc] initWithSet:selectSeatNumberList] autorelease];
-                }
+//                if (selectSeatNumberList) {
+                    pc.selectedSeatSet = selectSeatNumberList;
+//                }
                 [self.navigationController pushViewController:pc animated:YES];
                 pc.delegate = self;
                 [pc release];
@@ -354,7 +373,15 @@ enum{
                 [alert release];
                 [self.dataTableView reloadData];
             }
-
+            break;
+        }
+        case ROW_HELP:
+        {
+            HelpController *hc = [[HelpController alloc] init];
+            [hc setBackButton];
+            [self.navigationController pushViewController:hc animated:YES];
+            [hc release];
+            break;
         }
         default:
             break;
@@ -386,7 +413,7 @@ enum{
 }
 
 #pragma mark -pick seat && cinema delegate
--(void)didPickSeat:(NSSet *)selectedSeatSet
+-(void)didPickSeat:(NSMutableSet *)selectedSeatSet
 {
     self.selectSeatNumberList = selectedSeatSet;
     number = [selectedSeatSet count];
@@ -399,6 +426,8 @@ enum{
 {
     self.cinema = aCinema;
     [self updateCinemaSelectionLabel];
+    [self.selectSeatNumberList removeAllObjects];
+    number = 0;
 }
 
 

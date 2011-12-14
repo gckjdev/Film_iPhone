@@ -25,11 +25,9 @@
         NSLog(@"create <CinemaCell> but cannot find cell object from Nib");
         return nil;
     }
+    
     CinemaCell *cell = [topLevelObjects objectAtIndex:0];
     cell.delegate = delegate;
-    UIImageView *bgView = [[UIImageView alloc]initWithImage:RESOURCE_CELL_BG_IMAGE];
-    cell.backgroundView = bgView;
-    [bgView release];
     return cell;
 }
 
@@ -43,6 +41,26 @@
     return 85.0f;
 }
 
+
+- (void)setSelectedStyle
+{
+    UIImageView *sBgView = [[UIImageView alloc]initWithImage:RESOURCE_CELL_SELECTED_BG_IMAGE];
+    self.backgroundView = sBgView;
+    [sBgView release];
+    [cinemaName setTextColor:[UIColor whiteColor]];
+    [cinemaAddress setTextColor:[UIColor whiteColor]];
+    [telNumber.titleLabel setTextColor:[UIColor whiteColor]];
+}
+- (void)setUnselectedStyle
+{
+    UIImageView *bgView = [[UIImageView alloc]initWithImage:RESOURCE_CELL_BG_IMAGE];
+    self.backgroundView = bgView;
+    [bgView release];
+    [cinemaName setTextColor:CELL_TEXT_COLOR];
+    [cinemaAddress setTextColor:CELL_TEXT_COLOR];
+    [telNumber.titleLabel setTextColor:CELL_TEXT_COLOR];
+
+}
 
 - (void)setCellInfo:(Cinema *)cinema
 {

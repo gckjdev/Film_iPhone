@@ -25,5 +25,6 @@
 @property (retain, nonatomic) IBOutlet UIButton *makeCallButton;
 
 - (IBAction)clickTel:(id)sender;
-
+- (void)setSelectedStyle;
+- (void)setUnselectedStyle;
 @end

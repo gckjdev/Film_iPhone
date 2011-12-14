@@ -35,7 +35,7 @@ SeatService *GlobalGetSeatService()
         NSMutableSet *set = [[NSMutableSet alloc] init];
         
         for (int i = 0; i < 60; ++ i) {
-            if (rand() % 3 == 0) {
+            if (rand() % 5 == 0) {
                 NSNumber *number = [NSNumber numberWithInt:i];
                 [set addObject:number];
             }

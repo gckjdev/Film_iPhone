@@ -9,7 +9,7 @@
 
 @protocol PickSeatDelegate <NSObject>
 
--(void)didPickSeat:(NSSet *)selectedSeatSet;
+-(void)didPickSeat:(NSMutableSet *)selectedSeatSet;
 
 @end
 

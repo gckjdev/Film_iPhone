@@ -32,7 +32,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _selectedSeatSet = [[NSMutableSet alloc] init];
+//        _selectedSeatSet = [[NSMutableSet alloc] init];
     }
     return self;
 }
@@ -111,6 +111,7 @@
             [button setBackgroundImage:[UIImage imageNamed:@"set3.png"] forState:UIControlStateSelected];
         }
         
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         
         [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
         [buttonArray addObject:button];

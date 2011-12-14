@@ -72,6 +72,7 @@
     CinemaCell *cell = [tableView dequeueReusableCellWithIdentifier:[CinemaCell getCellIdentifier]];
     if (cell == nil) {
         cell = [CinemaCell createCell:self];
+//        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     Cinema *cinema = [dataList objectAtIndex:indexPath.row];
     if (cinema) {
@@ -81,10 +82,12 @@
         _selectedRow = indexPath.row;
     }
     if (_pickType == CINEMA_PICKER && _selectedRow == indexPath.row) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;    
-    }else  {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        [cell setSelectedStyle];
+    }else{
+        [cell setUnselectedStyle];
     }
+
+        
     return cell;
 }
 
@@ -92,6 +95,18 @@
 {
     return [CinemaCell getCellHeight];
 }
+
+-(void)clickDone
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    if (delegate && [delegate respondsToSelector:@selector(didPickCinema:)]) {
+        Cinema *cinema = (_selectedRow >=0 && (_selectedRow < [dataList count])) ?
+        [dataList objectAtIndex:_selectedRow] : nil;
+        [delegate didPickCinema:cinema];
+    }
+    
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (_pickType == CINEMA_NORMAL) {
@@ -107,7 +122,8 @@
     {
         _selectedRow = indexPath.row;
         self.selectedCinema = [dataList objectAtIndex:_selectedRow];
-        [tableView reloadData];
+//        [tableView reloadData];
+        [self clickDone];
     }
 
 }
@@ -125,16 +141,7 @@
 #pragma mark - View lifecycle
 
 
--(void)clickDone
-{
-    [self.navigationController popViewControllerAnimated:YES];
-    if (delegate && [delegate respondsToSelector:@selector(didPickCinema:)]) {
-        Cinema *cinema = (_selectedRow >=0 && (_selectedRow < [dataList count])) ?
-        [dataList objectAtIndex:_selectedRow] : nil;
-        [delegate didPickCinema:cinema];
-    }
-    
-}
+
 - (void)viewDidLoad
 {
     [self setBackgroundImageName:DOWNLOAD_BG];
@@ -146,7 +153,7 @@
     self.dataList = [[CinemaManager defaultManager] cinemaList];
     
     if (_pickType == CINEMA_PICKER) {
-        [self setDownloadRightBarButton:@"    确定    " selector:@selector(clickDone)];
+//        [self setDownloadRightBarButton:@"    确定    " selector:@selector(clickDone)];
         [self setBackButton];
 
     }
