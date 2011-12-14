@@ -119,7 +119,7 @@
     [self setBackgroundImageName:DOWNLOAD_BG];
     [self setDownloadNavigationTitle:@"选座"];  
 
-    [self setDownloadRightBarButton:@"确定" selector:@selector(clickDone)];
+    [self setDownloadRightBarButton:@"  确定  " selector:@selector(clickDone)];
     [self setBackButton];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
