@@ -93,28 +93,31 @@
     
     NSString* priceText = nil;
     if (priceDecimal == 0) {
-        priceText = [NSString stringWithFormat:@"折扣:  %d  折", priceInteger];
+        priceText = [NSString stringWithFormat:@"折扣:    %d  折", priceInteger];
     }else{
-        priceText = [NSString stringWithFormat:@"折扣:  %d.%d  折", priceInteger,priceDecimal];
+        priceText = [NSString stringWithFormat:@"折扣:    %d.%d  折", priceInteger,priceDecimal];
     }
     
     NSMutableAttributedString* attrStr = [NSMutableAttributedString attributedStringWithString:priceText];
+
+    [attrStr setTextColor:CELL_TEXT_COLOR];    
+    [attrStr setFont:[FontUtils HeitiSC:12]];    
     
-    [attrStr setFont:[FontUtils HeitiSC:24]];
-    [attrStr setTextColor:[UIColor colorWithRed:245/255.0 green:109/255.0 blue:42/255.0 alpha:1.0f]];    
-    
-    [attrStr setTextColor:CELL_TEXT_COLOR range:[priceText rangeOfString:@" 折"]];
-    
-    [attrStr setFont:[FontUtils HeitiSC:12] range:[priceText rangeOfString:@" 折"]];
-    
-    if (priceDecimal != 0) {
-        NSString *text = [NSString stringWithFormat:@".%d",priceDecimal];
-        [attrStr setFont:[FontUtils HeitiSC:18] range:[priceText rangeOfString:text]];
-    }
-    
-    [attrStr setFont:[FontUtils HeitiSC:12] range:[priceText rangeOfString:@"折扣:"]];
-    
-    [attrStr setTextColor:CELL_TEXT_COLOR range:[priceText rangeOfString:@"折扣:"]];
+//    [attrStr setFont:[FontUtils HeitiSC:24]];
+//    [attrStr setTextColor:[UIColor colorWithRed:245/255.0 green:109/255.0 blue:42/255.0 alpha:1.0f]];    
+//    
+//    [attrStr setTextColor:CELL_TEXT_COLOR range:[priceText rangeOfString:@" 折"]];
+//    
+//    [attrStr setFont:[FontUtils HeitiSC:12] range:[priceText rangeOfString:@" 折"]];
+//    
+//    if (priceDecimal != 0) {
+//        NSString *text = [NSString stringWithFormat:@".%d",priceDecimal];
+//        [attrStr setFont:[FontUtils HeitiSC:18] range:[priceText rangeOfString:text]];
+//    }
+//    
+//    [attrStr setFont:[FontUtils HeitiSC:12] range:[priceText rangeOfString:@"折扣:"]];
+//    
+//    [attrStr setTextColor:CELL_TEXT_COLOR range:[priceText rangeOfString:@"折扣:"]];
     
     self.debate.attributedText = attrStr;
     self.debate.backgroundColor = [UIColor clearColor];

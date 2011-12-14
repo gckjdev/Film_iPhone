@@ -83,7 +83,7 @@
 
 
 - (IBAction)clickTel:(id)sender {
-    NSString *tel = [NSString stringWithFormat:@"tel://%@",_cinema.telNumber];
+    NSString *tel = [NSString stringWithFormat:@"%@",_cinema.telNumber];
     [UIUtils makeCall:tel];
 }
 @end

@@ -200,7 +200,7 @@ enum{
 
 -(void)call12580
 {
-    [UIUtils makeCall:@"tel://12580"];
+    [UIUtils makeCall:@"12580"];
 }
 -(void)setCallCell:(UITableViewCell *)cell
 {
