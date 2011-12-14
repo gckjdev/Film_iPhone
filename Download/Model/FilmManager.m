@@ -50,7 +50,8 @@ FilmManager * GlobalGetFilmManager()
               director:(NSString *)aDirector actorList:(NSArray *)aActorList 
                  price:(CGFloat)aPrice value:(CGFloat)aValue
 {
-    Film *film = [[Film alloc] initWithFilmId:[_filmList count] name:aFilmName 
+    Film *film = [[Film alloc] initWithFilmId:[_filmList count] 
+                                         name:aFilmName 
                                         image:[UIImage imageNamed:aImageName] 
                                         director:aDirector 
                                         actorList:aActorList 
@@ -58,11 +59,24 @@ FilmManager * GlobalGetFilmManager()
                                         value:aValue];
     [_filmList addObject:film];
     [film release];
+    
+    
+    
 }
 
 -(void)removeAllFilms
 {
     [_filmList removeAllObjects];
+}
+
+-(Film *)getFilmByCinema:(NSInteger)filmId
+{
+    for (Film *film in _filmList) {
+        if (film.filmId == filmId) {
+            return film;
+        }
+    }
+    return nil;
 }
 
 -(void)dealloc

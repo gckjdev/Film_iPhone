@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+
+
+
+
 @class Film;
+
 @interface FilmManager : NSObject
 {
     NSMutableArray *_filmList;
@@ -22,6 +27,7 @@
               director:(NSString *)aDirector actorList:(NSArray *)aActorList 
                  price:(CGFloat)aPrice value:(CGFloat)aValue;
 -(void)removeAllFilms;
+-(Film *)getFilmByCinema:(NSInteger)filmId;
 @end
 
 extern FilmManager *GlobalGetFilmManager();

@@ -9,6 +9,7 @@
 #import "FilmService.h"
 #import "Film.h"
 #import "FilmManager.h"
+#import "FileUtil.h"
 
 FilmService *service;
 
@@ -23,7 +24,8 @@ extern FilmService *GlobalGetFilmService()
 @implementation FilmService
 
 
-@synthesize data;  
+@synthesize data; 
+@synthesize delegate;
 
 -(void)testDataInit
 {  
@@ -38,27 +40,34 @@ extern FilmService *GlobalGetFilmService()
     
 //    
 //    // Load the data.
-//    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Datadunpin" ofType:@"plist"];
+//    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"FilmInformations" ofType:@"plist"];
 //    self.data = [NSMutableArray arrayWithContentsOfFile:dataPath];
 //    
-//
 //    
-//    for (int i = 0; i <= 20; i++ ) {
+//    
+//    for (int i = 0; i <= [self.data count] - 1; i++ ) {
 //        
 //       
 //         NSMutableDictionary *dataItem = [self.data objectAtIndex:i];
 //        
-//        NSLog(@"%@,",[dataItem description]);
+//        
 //        
 //        [manager addFilmWithName:[dataItem objectForKey:@"FilmName"] 
-//                       imageName:nil//[UIImage imageNamed:[dataItem objectForKey:@"FilmImage"]]
+//                       imageName:[dataItem objectForKey:@"FilmImage"]
 //                        director:[dataItem objectForKey:@"Director"]
-//                        actorList:[dataItem objectForKey:@"Actors"]
+//                        actorList:[dataItem objectForKey:@"ActorList"]
 //                            price:28
 //                            value:60];
+//        
+//     
+//        NSLog(@"%@, 该电影包含数据总量为 ：%d ,电影数目为:%d ",[dataItem description], [dataItem count], [self.data count]);
 //    }
-//
-//
+
+    
+    
+
+
+
     
     
     [manager addFilmWithName:@"东成西就2011" 
@@ -98,6 +107,7 @@ extern FilmService *GlobalGetFilmService()
                     director:@"叶念琛" 
                    actorList:[NSArray arrayWithObjects:@"周秀娜",@"罗仲谦",@"洪天明",@"庄思敏",@"杨梓瑶",@"沈志明", nil] 
                        price:48 value:60];
+
     [manager addFilmWithName:@"巨额交易" imageName:@"7.jpg" director:@"马俪文" 
                    actorList:[NSArray arrayWithObjects:@"蓝正龙",@"立威廉",@"韩彩英", nil] 
                        price:38 value:60];
@@ -155,11 +165,98 @@ extern FilmService *GlobalGetFilmService()
 
 
     
+     
+    
+    NSLog(@" it is the films' number :%i",[manager.filmList count ] ) ;   
+
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init] ;
+    NSMutableArray * array = [[NSMutableArray alloc] init];
+    
+    for (int i= 0; i<= [manager.filmList count ] - 1; i++) {
+        
+    Film *aFilm = [manager getFilmByCinema:i];
+    NSString *filmPrice = [NSString stringWithFormat:@"%f",aFilm.price];
+    NSString *filmValue = [NSString stringWithFormat:@"%f",aFilm.value];
+    NSString *filmImage = [NSString stringWithFormat:@"%@",aFilm.image];
+
+        [dict setObject:aFilm.name forKey:@"name"];
+        [dict setObject:aFilm.director forKey :@"director"];
+        [dict setObject:filmPrice forKey : @"price"];
+        [dict setObject:filmValue forKey :@"value"];
+        [dict setObject:aFilm.actorList forKey :@"actorList"];
+        [dict setObject:filmImage forKey :@"imageName"];
+        [array addObject:dict];
+                   
+            }
+    
+    
+    
+     
+    
+    NSString *filePath = [NSString stringWithFormat:@"%@/data.plist",[FileUtil getAppHomeDir]];
+    BOOL  result =  [array writeToFile:filePath  atomically:YES];
+    
+    
+    
+    NSLog(@"the file location : %@",[FileUtil getAppHomeDir]);    
+    NSLog(@"what do you think of the result :%d",result);
+    NSLog(@" those are the movies :%@",[array description ]);
+
     
     
     
     
+}
+
+
+
+- (void)readWritePlist : (NSArray*)filmList{
     
+//	NSString *homePath = [[NSBundle mainBundle] executablePath];
+//	NSArray *strings = [homePath componentsSeparatedByString: @"/"];
+//	NSString *executableName  = [strings objectAtIndex:[strings count]-1];	
+//	NSString *baseDirectory = [homePath substringToIndex:
+//							   [homePath length]-[executableName length]-1];	
+	
+	//NSString *filePath = [NSString stringWithFormat:@"%@/data.plist",[FileUtil getAppHomeDir]];
+    
+    
+   //  NSLog(@"the file location : %@",[FileUtil getAppHomeDir]);    
+	//NSDictionary *dataDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+	//NSMutableDictionary *dataDict = 
+	//[[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+	//NSLog(@"dataDict: %@",dataDict);
+    
+    
+    
+    
+	//change the value
+	//[dataDict setObject:@"YES" forKey:@"Trial"];
+    
+    
+    
+	//write back to file
+//	BOOL result = [filmList writeToFile:filePath atomically:YES];
+//    NSLog(@"write file result = %d", result);
+	 //[dataDict release];	
+    
+    
+    
+   
+    
+    
+}
+
+
+
+
+
+
+-(void)dealloc{
+    
+    [data release];
+
+
 }
 -(void)updateFilmList
 {

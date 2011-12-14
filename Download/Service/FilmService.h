@@ -19,9 +19,12 @@
     
     
 }
+@property (nonatomic, assign) id delegate;
+
 @property (nonatomic, retain) NSMutableArray *data;
 
 -(void)updateFilmList;
+- (void)readWritePlist : (NSArray*)filmList ;
 
 
 
