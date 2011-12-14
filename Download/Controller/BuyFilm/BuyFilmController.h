@@ -8,18 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import "PPTableViewController.h"
+#import "PickSeatController.h"
 #import "UIBlankView.h"
+#import "CinemaController.h"
 @class Film;
-@interface BuyFilmController : PPTableViewController<UITextFieldDelegate,UIBlankViewDelegate>
+@interface BuyFilmController : PPTableViewController<UITextFieldDelegate,
+                                UIBlankViewDelegate,PickSeatDelegate,pickCinemaDelegate>
 {
     UITextField *filmNumber;
     UILabel *priceLabel;
     Film *_fiml;
     NSInteger number;
-    
+    UILabel *cinemaLabel;
+    UILabel *seatLabel;    
+    NSMutableSet *selectSeatNumberList;
 }
 
 @property(nonatomic, retain) Film *film;
+@property(nonatomic, retain) Cinema *cinema;
+@property(nonatomic, assign) BOOL hasConstCinema;
+@property(nonatomic, retain) NSMutableSet *selectSeatNumberList;
 
 -(id)initWithFilm:(Film *)film;
 @end

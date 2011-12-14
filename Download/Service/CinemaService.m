@@ -43,59 +43,33 @@ CinemaService *GlobalGetCinemaService()
     [manager addCinemaWithName:@"榕泉影剧院" address:@"文明路65号" telNumber:@"020-83372923"];
     
     
-    
-    
     [manager addCinemaWithName:@"羊城电影院" address:@"长堤大马路248号" telNumber:@"020-83347984"];
     
-     [manager addCinemaWithName:@"五月花电影城" address:@"中山五路68号五月花商业广场6层" telNumber:@"020-83330836;020-83331003;020-83337366"];
+    [manager addCinemaWithName:@"五月花电影城" address:@"中山五路68号五月花商业广场6层" telNumber:@"020-83330836;020-83331003;020-83337366"];
     
     [manager addCinemaWithName:@"太古仓电影库" address:@"革新路124之6-7" telNumber:@"020-84309788"];
     
-     [manager addCinemaWithName:@"上影联和电影城" address:@"江燕路108号燕汇广场4层" telNumber:@"020-89778118"];
-    
-    
+    [manager addCinemaWithName:@"上影联和电影城" address:@"江燕路108号燕汇广场4层" telNumber:@"020-89778118"];
     
     
     [manager addCinemaWithName:@"飞扬影城(天河城)" address:@"天河路208号天河城4层" telNumber:@"020-85590336;020-85596002;020-85591013"];
-
-     [manager addCinemaWithName:@"中影火山湖电影城" address:@"农林下路4-6号锦轩现代城4层" telNumber:@"020-87623868"];
     
-     [manager addCinemaWithName:@"员村文化宫电影院库" address:@"员村二横路2" telNumber:@"020-85533391"];
-
-     [manager addCinemaWithName:@"粤艺影院" address:@"桂花岗一街" telNumber:@"020-83337061"];
+    [manager addCinemaWithName:@"中影火山湖电影城" address:@"农林下路4-6号锦轩现代城4层" telNumber:@"020-87623868"];
+    
+    [manager addCinemaWithName:@"员村文化宫电影院库" address:@"员村二横路2" telNumber:@"020-85533391"];
+    
+    [manager addCinemaWithName:@"粤艺影院" address:@"桂花岗一街" telNumber:@"020-83337061"];
     
     
-
-     [manager addCinemaWithName:@"东山八一电影院" address:@"达道路16" telNumber:@"020-83330721"];
-
-     [manager addCinemaWithName:@"花都数字电影城" address:@"新华路30号" telNumber:@"020-86832440"];
+    [manager addCinemaWithName:@"东山八一电影院" address:@"达道路16" telNumber:@"020-83330721"];
+    
+    [manager addCinemaWithName:@"花都数字电影城" address:@"新华路30号" telNumber:@"020-86832440"];
     
     [manager addCinemaWithName:@"沙河影剧场" address:@"沙河横马路37号" telNumber:@"020-87738713"];
-
-     [manager addCinemaWithName:@"儿童电影院" address:@"海珠中路249号" telNumber:@"020-81375050"];
     
+    [manager addCinemaWithName:@"儿童电影院" address:@"海珠中路249号" telNumber:@"020-81375050"];
     
-
-    [manager addCinemaWithName:@"摩登电影城" address:@"东圃大马路14" telNumber:@"020-62861010"];
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
+    [manager addCinemaWithName:@"摩登电影城" address:@"东圃大马路14" telNumber:@"020-62861010"];  
     
 }
 
