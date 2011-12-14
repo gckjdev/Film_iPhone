@@ -15,6 +15,7 @@
 #import "BookFilmController.h"
 #import "CinemaController.h"
 #import "HelpController.h"
+#import "PromotionController.h"
 
 //#import "DownloadManageController.h"
 //#import "TopDownloadController.h"
@@ -88,7 +89,7 @@ enum TAB_INDEX {
     
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
-	[UIUtils addViewController:[BookFilmController alloc]
+	[UIUtils addViewController:[PromotionController alloc]
 					 viewTitle:@"促销"
 					 viewImage:TOP_ICON
 			  hasNavController:YES			
@@ -127,7 +128,7 @@ enum TAB_INDEX {
                                                   nil]];
     	
 	self.tabBarController.viewControllers = controllers;	
-    self.tabBarController.selectedIndex = BOOKFILM;
+    self.tabBarController.selectedIndex = PROMOTION;
 	[controllers release];
 }
 

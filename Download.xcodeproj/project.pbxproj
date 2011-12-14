@@ -11,6 +11,8 @@
 		CA155C80149847420040C5BD /* Seat.m in Sources */ = {isa = PBXBuildFile; fileRef = CA155C7F149847420040C5BD /* Seat.m */; };
 		CA155C83149849190040C5BD /* SeatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA155C82149849190040C5BD /* SeatManager.m */; };
 		CA155C8614984B340040C5BD /* SeatService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA155C8514984B340040C5BD /* SeatService.m */; };
+		CA155CA0149890B70040C5BD /* PromotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA155C9E149890B70040C5BD /* PromotionController.m */; };
+		CA155CA1149890B70040C5BD /* PromotionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA155C9F149890B70040C5BD /* PromotionController.xib */; };
 		CA19F0DA1484CDB900CDF114 /* DownloadResource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA19F0D91484CDB900CDF114 /* DownloadResource.m */; };
 		CA19F1411484DACE00CDF114 /* png_08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA19F0E01484DACE00CDF114 /* png_08@2x.png */; };
 		CA19F1421484DACE00CDF114 /* png_102@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA19F0E11484DACE00CDF114 /* png_102@2x.png */; };
@@ -492,6 +494,9 @@
 		CA155C82149849190040C5BD /* SeatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatManager.m; sourceTree = "<group>"; };
 		CA155C8414984B330040C5BD /* SeatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatService.h; sourceTree = "<group>"; };
 		CA155C8514984B340040C5BD /* SeatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatService.m; sourceTree = "<group>"; };
+		CA155C9D149890B70040C5BD /* PromotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromotionController.h; sourceTree = "<group>"; };
+		CA155C9E149890B70040C5BD /* PromotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromotionController.m; sourceTree = "<group>"; };
+		CA155C9F149890B70040C5BD /* PromotionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromotionController.xib; sourceTree = "<group>"; };
 		CA19F0D81484CDB900CDF114 /* DownloadResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadResource.h; sourceTree = "<group>"; };
 		CA19F0D91484CDB900CDF114 /* DownloadResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadResource.m; sourceTree = "<group>"; };
 		CA19F0E01484DACE00CDF114 /* png_08@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_08@2x.png"; sourceTree = "<group>"; };
@@ -1243,6 +1248,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA155C9C149890A50040C5BD /* Promotion */ = {
+			isa = PBXGroup;
+			children = (
+				CA155C9D149890B70040C5BD /* PromotionController.h */,
+				CA155C9E149890B70040C5BD /* PromotionController.m */,
+				CA155C9F149890B70040C5BD /* PromotionController.xib */,
+			);
+			path = Promotion;
+			sourceTree = "<group>";
+		};
 		CA19F0DF1484DACD00CDF114 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -2554,6 +2569,7 @@
 		CAEA38DB1467C38B006D2975 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA155C9C149890A50040C5BD /* Promotion */,
 				CAC611F014977E5900C30C60 /* Help */,
 				CA63C7961495FBCD00DA8ED2 /* BuyFilm */,
 				CA63C7291495E6FD00DA8ED2 /* Cinema */,
@@ -2933,6 +2949,7 @@
 				CAC611E614974AF600C30C60 /* PhonePay.png in Resources */,
 				CAC611F514977E7F00C30C60 /* HelpController.xib in Resources */,
 				CA155C7C149846380040C5BD /* set3@2x.png in Resources */,
+				CA155CA1149890B70040C5BD /* PromotionController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3191,6 +3208,7 @@
 				CA155C80149847420040C5BD /* Seat.m in Sources */,
 				CA155C83149849190040C5BD /* SeatManager.m in Sources */,
 				CA155C8614984B340040C5BD /* SeatService.m in Sources */,
+				CA155CA0149890B70040C5BD /* PromotionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
