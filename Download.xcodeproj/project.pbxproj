@@ -232,6 +232,7 @@
 		CAC611EA1497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC611E91497544300C30C60 /* UIViewController+DownloadViewControllerAddition.m */; };
 		CAC611F414977E7F00C30C60 /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC611F214977E7F00C30C60 /* HelpController.m */; };
 		CAC611F514977E7F00C30C60 /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC611F314977E7F00C30C60 /* HelpController.xib */; };
+		CACB7FE61498BC7800451CB6 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CACB7FE51498BC7800451CB6 /* 1.jpg */; };
 		CAE433711495AB64006397FE /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433701495AB64006397FE /* Film.m */; };
 		CAE433751495AB75006397FE /* FilmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433741495AB75006397FE /* FilmManager.m */; };
 		CAE4337B1495B280006397FE /* BookFilmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433791495B280006397FE /* BookFilmController.m */; };
@@ -790,6 +791,7 @@
 		CAC611F114977E7F00C30C60 /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
 		CAC611F214977E7F00C30C60 /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
 		CAC611F314977E7F00C30C60 /* HelpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
+		CACB7FE51498BC7800451CB6 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		CAE4336F1495AB64006397FE /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
 		CAE433701495AB64006397FE /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
 		CAE433731495AB75006397FE /* FilmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmManager.h; sourceTree = "<group>"; };
@@ -1390,6 +1392,7 @@
 		CA63C7541495F9DD00DA8ED2 /* film_pics */ = {
 			isa = PBXGroup;
 			children = (
+				CACB7FE51498BC7800451CB6 /* 1.jpg */,
 				CA63C7561495F9DD00DA8ED2 /* 10.jpg */,
 				CA63C7571495F9DD00DA8ED2 /* 11.jpg */,
 				CA63C7581495F9DD00DA8ED2 /* 12.jpg */,
@@ -2953,6 +2956,7 @@
 				CAC611F514977E7F00C30C60 /* HelpController.xib in Resources */,
 				CA155C7C149846380040C5BD /* set3@2x.png in Resources */,
 				CA155CA1149890B70040C5BD /* PromotionController.xib in Resources */,
+				CACB7FE61498BC7800451CB6 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
