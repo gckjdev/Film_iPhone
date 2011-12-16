@@ -131,6 +131,7 @@
         }
     }
 	[coverflow setNumberOfCovers:[covers count]];
+    [coverflow bringCoverAtIndexToFront:[covers count]/2 animated:NO];
 	
 }
 - (void) viewWillAppear:(BOOL)animated{
@@ -139,7 +140,7 @@
 }
 - (void) viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
-	[coverflow bringCoverAtIndexToFront:[covers count]/2 animated:NO];
+//	[coverflow bringCoverAtIndexToFront:[covers count]/2 animated:NO];
 }
 - (void) viewWillDisappear:(BOOL)animated{
 	[super viewWillDisappear:animated];
@@ -177,11 +178,10 @@
 		CGRect rect = CGRectMake(0, 0, 230, 300);
 
 		cover = [[[TKCoverflowCoverView alloc] initWithFrame:rect] autorelease]; // 224
-		cover.baseline = 240;
+		cover.baseline = 200;
 		
 	}
 	cover.image = [covers objectAtIndex:index%[covers count]];
-    
 	return cover;
 	
 }

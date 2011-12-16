@@ -57,7 +57,7 @@
 							<object class="IBUILabel" id="365543488">
 								<reference key="NSNextResponder" ref="501265161"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{158, 1}, {160, 40}}</string>
+								<string key="NSFrame">{{158, 1}, {155, 40}}</string>
 								<reference key="NSSuperview" ref="501265161"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="782625567"/>
@@ -82,18 +82,18 @@
 								<int key="IBUILineBreakMode">0</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<int key="type">2</int>
-									<double key="pointSize">15</double>
+									<double key="pointSize">16</double>
 								</object>
 								<object class="NSFont" key="IBUIFont">
 									<string key="NSName">Helvetica-Bold</string>
-									<double key="NSSize">15</double>
+									<double key="NSSize">16</double>
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
 							<object class="IBUILabel" id="782625567">
 								<reference key="NSNextResponder" ref="501265161"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{158, 36}, {160, 35}}</string>
+								<string key="NSFrame">{{158, 36}, {155, 35}}</string>
 								<reference key="NSSuperview" ref="501265161"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="147460459"/>
@@ -107,6 +107,7 @@
 								<reference key="IBUITextColor" ref="531937399"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUINumberOfLines">2</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription" id="122210669">
@@ -122,7 +123,7 @@
 							<object class="IBUILabel" id="147460459">
 								<reference key="NSNextResponder" ref="501265161"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{158, 69}, {160, 40}}</string>
+								<string key="NSFrame">{{158, 71}, {155, 40}}</string>
 								<reference key="NSSuperview" ref="501265161"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="134851512"/>
@@ -136,6 +137,7 @@
 								<reference key="IBUITextColor" ref="531937399"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUINumberOfLines">2</int>
 								<reference key="IBUIFontDescription" ref="122210669"/>
@@ -144,7 +146,7 @@
 							<object class="IBUILabel" id="134851512">
 								<reference key="NSNextResponder" ref="501265161"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{158, 106}, {160, 40}}</string>
+								<string key="NSFrame">{{158, 115}, {160, 24}}</string>
 								<reference key="NSSuperview" ref="501265161"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="227622617"/>
@@ -158,6 +160,7 @@
 								<reference key="IBUITextColor" ref="531937399"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUINumberOfLines">2</int>
 								<reference key="IBUIFontDescription" ref="122210669"/>
@@ -166,7 +169,7 @@
 							<object class="IBUILabel" id="227622617">
 								<reference key="NSNextResponder" ref="501265161"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{158, 141}, {160, 40}}</string>
+								<string key="NSFrame">{{158, 151}, {160, 26}}</string>
 								<reference key="NSSuperview" ref="501265161"/>
 								<reference key="NSWindow"/>
 								<reference key="IBUIBackgroundColor" ref="296070758"/>
@@ -179,6 +182,7 @@
 								<reference key="IBUITextColor" ref="531937399"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUINumberOfLines">2</int>
 								<reference key="IBUIFontDescription" ref="122210669"/>
@@ -283,8 +287,8 @@
 							<reference ref="134851512"/>
 							<reference ref="227622617"/>
 							<reference ref="782625567"/>
-							<reference ref="147460459"/>
 							<reference ref="444168985"/>
+							<reference ref="147460459"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -330,7 +334,9 @@
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="7.CustomClassName">OHAttributedLabel</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="8.CustomClassName">OHAttributedLabel</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -347,11 +353,11 @@
 					<string key="superclassName">PPTableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="actors">UILabel</string>
-						<string key="debate">UILabel</string>
+						<string key="debate">OHAttributedLabel</string>
 						<string key="director">UILabel</string>
 						<string key="filmName">UILabel</string>
 						<string key="poster">UIImageView</string>
-						<string key="price">UILabel</string>
+						<string key="price">OHAttributedLabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="actors">
@@ -360,7 +366,7 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="debate">
 							<string key="name">debate</string>
-							<string key="candidateClassName">UILabel</string>
+							<string key="candidateClassName">OHAttributedLabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="director">
 							<string key="name">director</string>
@@ -376,12 +382,31 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="price">
 							<string key="name">price</string>
-							<string key="candidateClassName">UILabel</string>
+							<string key="candidateClassName">OHAttributedLabel</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/BookFilmCell.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">OHAttributedLabel</string>
+					<string key="superclassName">UILabel</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">delegate</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">delegate</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">delegate</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/OHAttributedLabel.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

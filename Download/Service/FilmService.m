@@ -148,45 +148,36 @@ extern FilmService *GlobalGetFilmService()
 //                   actorList:[NSArray arrayWithObjects:@"克里斯蒂安·贝尔",@"佟大为",@"窦骁", nil] 
 //                       price:28 
 //                       value:60];
+    
+//    for (int i = 0; i <= [self.data count] - 1; i++ ) {
+//        
+//       
+//         NSMutableDictionary *dataItem = [self.data objectAtIndex:i];
+//        
+//        
+//        
+//        [manager addFilmWithName:[dataItem objectForKey:@"FilmName"] 
+//                       imageName:[dataItem objectForKey:@"FilmImage"]
+//                        director:[dataItem objectForKey:@"Director"]
+//                        actorList:[dataItem objectForKey:@"ActorList"]
+//                            price:28
+//                            value:60];
+//        
+//     
+//        NSLog(@"%@, 该电影包含数据总量为 ：%d ,电影数目为:%d ",[dataItem description], [dataItem count], [self.data count]);
+//    }
+
+    
+    
 
 
-   
+
+    
+      
 }
 
 
 
-- (void)readWritePlist : (NSArray*)filmList{
-    
-//	NSString *homePath = [[NSBundle mainBundle] executablePath];
-//	NSArray *strings = [homePath componentsSeparatedByString: @"/"];
-//	NSString *executableName  = [strings objectAtIndex:[strings count]-1];	
-//	NSString *baseDirectory = [homePath substringToIndex:
-//							   [homePath length]-[executableName length]-1];	
-	
-	//NSString *filePath = [NSString stringWithFormat:@"%@/data.plist",[FileUtil getAppHomeDir]];
-    
-    
-   //  NSLog(@"the file location : %@",[FileUtil getAppHomeDir]);    
-	//NSDictionary *dataDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
-	//NSMutableDictionary *dataDict = 
-	//[[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
-	//NSLog(@"dataDict: %@",dataDict);
-    
-    
-    
-    
-	//change the value
-	//[dataDict setObject:@"YES" forKey:@"Trial"];
-    
-    
-    
-	//write back to file
-//	BOOL result = [filmList writeToFile:filePath atomically:YES];
-//    NSLog(@"write file result = %d", result);
-	 //[dataDict release];	
-    
-    
-}
 
 
 
