@@ -22,6 +22,8 @@
 {
  //   MSearch *_search;
 }
+
+@property(nonatomic,retain) NSMutableArray *data ;
 -(void)updateCinemaListWithCity:(NSString *)city delegate:(id<CinemaServiceDelegate>) delegate;
 
 @end

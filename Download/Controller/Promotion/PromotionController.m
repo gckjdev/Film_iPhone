@@ -123,6 +123,9 @@
     int i = 0;
     for (Film *film in temp) {
         if ((i++ % ([temp count] /COUNT )) == 0) {
+            if (film.image == nil) {
+                continue;
+            }
             [self.covers addObject:film.image];
             [filmList addObject:film];
         }

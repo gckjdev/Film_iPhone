@@ -21,5 +21,9 @@
 -(void)removeAllCinemas;
 -(void)addCinemaWithName:(NSString *)name address:(NSString *)address 
                telNumber:(NSString*)telNumber;
+
+
+-(Cinema *)getCinema:(NSInteger)cinemaId ;
+
 @end
 extern CinemaManager *GlobalGetCinemaManager();

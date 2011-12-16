@@ -36,7 +36,14 @@ FilmManager * GlobalGetFilmManager()
 
 -(void)addFilm:(Film *)film
 {
-    [_filmList addObject:film];
+    if (film !=nil) {
+        
+        [_filmList addObject:film];
+
+    }
+        
+        
+        
 }
 
 -(void)removeFilm:(Film *)film
@@ -57,7 +64,11 @@ FilmManager * GlobalGetFilmManager()
                                         actorList:aActorList 
                                         price:aPrice 
                                         value:aValue];
+    
+   
+    
     [_filmList addObject:film];
+    
     [film release];
     
     

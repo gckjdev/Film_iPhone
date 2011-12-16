@@ -59,6 +59,17 @@ CinemaManager * GlobalGetCinemaManager()
     [_cinemaList removeAllObjects];
 }
 
+
+
+-(Cinema *)getCinema:(NSInteger)cinemaId
+{
+    for (Cinema *Cinema in _cinemaList) {
+        if (Cinema.cinemaId == cinemaId) {
+            return Cinema;
+        }
+    }
+    return nil;
+}
 -(void)dealloc
 {
     [_cinemaList release];
