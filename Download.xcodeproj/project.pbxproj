@@ -239,8 +239,6 @@
 		CAE433811495B2A1006397FE /* BookFilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE4337F1495B2A1006397FE /* BookFilmCell.xib */; };
 		CAE433881495BA08006397FE /* FilmService.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE433871495BA08006397FE /* FilmService.m */; };
 		CAE4339F1495D03E006397FE /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE4338B1495D03E006397FE /* 1.jpg */; };
-		CAE45CB3148F4EE400447806 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE45CAB148F4EE400447806 /* ReviewRequest.strings */; };
-		CAE45CB4148F4EE400447806 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE45CAE148F4EE400447806 /* ReviewRequest.strings */; };
 		CAE45CB5148F4EE400447806 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE45CB1148F4EE400447806 /* ReviewRequest.strings */; };
 		CAEA30D01467BCAE006D2975 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEA30CF1467BCAE006D2975 /* UIKit.framework */; };
 		CAEA30D21467BCAE006D2975 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEA30D11467BCAE006D2975 /* Foundation.framework */; };
@@ -472,6 +470,8 @@
 		CAEA38CB1467BE3E006D2975 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEA38CA1467BE3E006D2975 /* libxml2.dylib */; };
 		CAEA38CD1467C15E006D2975 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEA38CC1467C15E006D2975 /* CoreText.framework */; };
 		CAF71223146F6D3B00FD161D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF71222146F6D3A00FD161D /* MediaPlayer.framework */; };
+		E4754A38149B57990060C8F9 /* Mydata.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4754A37149B57990060C8F9 /* Mydata.plist */; };
+		E4754A3A149B5C400060C8F9 /* Cinemadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4754A39149B5C400060C8F9 /* Cinemadata.plist */; };
 		EAE9CFC01486319D00EB8755 /* png_93-82.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBE1486319D00EB8755 /* png_93-82.png */; };
 		EAE9CFC11486319D00EB8755 /* png_178@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBF1486319D00EB8755 /* png_178@2x.png */; };
 /* End PBXBuildFile section */
@@ -802,8 +802,6 @@
 		CAE433861495BA08006397FE /* FilmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmService.h; sourceTree = "<group>"; };
 		CAE433871495BA08006397FE /* FilmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmService.m; sourceTree = "<group>"; };
 		CAE4338B1495D03E006397FE /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		CAE45CAC148F4EE400447806 /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = ReviewRequest.strings; sourceTree = "<group>"; };
-		CAE45CAF148F4EE400447806 /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = ReviewRequest.strings; sourceTree = "<group>"; };
 		CAE45CB2148F4EE400447806 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ReviewRequest.strings; sourceTree = "<group>"; };
 		CAEA30CB1467BCAE006D2975 /* Download.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Download.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEA30CF1467BCAE006D2975 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1201,6 +1199,8 @@
 		CAEA38CA1467BE3E006D2975 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CAEA38CC1467C15E006D2975 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		CAF71222146F6D3A00FD161D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E4754A37149B57990060C8F9 /* Mydata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mydata.plist; sourceTree = "<group>"; };
+		E4754A39149B5C400060C8F9 /* Cinemadata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cinemadata.plist; sourceTree = "<group>"; };
 		EAE9CFBE1486319D00EB8755 /* png_93-82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_93-82.png"; sourceTree = "<group>"; };
 		EAE9CFBF1486319D00EB8755 /* png_178@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_178@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1670,6 +1670,8 @@
 		CAE433851495BA08006397FE /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				E4754A37149B57990060C8F9 /* Mydata.plist */,
+				E4754A39149B5C400060C8F9 /* Cinemadata.plist */,
 				CAE433861495BA08006397FE /* FilmService.h */,
 				CAE433871495BA08006397FE /* FilmService.m */,
 				CA63C73B1495EC9200DA8ED2 /* CinemaService.h */,
@@ -1702,7 +1704,6 @@
 		CAE45CAA148F4EE400447806 /* zh_Hant.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				CAE45CAB148F4EE400447806 /* ReviewRequest.strings */,
 			);
 			path = zh_Hant.lproj;
 			sourceTree = "<group>";
@@ -1710,7 +1711,6 @@
 		CAE45CAD148F4EE400447806 /* zh_Hans.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				CAE45CAE148F4EE400447806 /* ReviewRequest.strings */,
 			);
 			path = zh_Hans.lproj;
 			sourceTree = "<group>";
@@ -1748,28 +1748,28 @@
 		CAEA30CE1467BCAE006D2975 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CA83D14114726BF500E004A6 /* QuickLook.framework */,
-				CABA82131470D052008E8AFB /* Security.framework */,
-				CAF71222146F6D3A00FD161D /* MediaPlayer.framework */,
-				CAEA38CC1467C15E006D2975 /* CoreText.framework */,
-				CAEA38CA1467BE3E006D2975 /* libxml2.dylib */,
-				CAEA38C81467BE32006D2975 /* libz.dylib */,
-				CAEA38C61467BE13006D2975 /* SystemConfiguration.framework */,
-				CAEA38C41467BE0B006D2975 /* MessageUI.framework */,
-				CAEA38C21467BDFF006D2975 /* QuartzCore.framework */,
-				CAEA38BF1467BDD7006D2975 /* MapKit.framework */,
-				CAEA38BB1467BDD1006D2975 /* AudioToolbox.framework */,
-				CAEA38B91467BDB7006D2975 /* MobileCoreServices.framework */,
 				CAEA38AA1467BD97006D2975 /* AddressBook.framework */,
 				CAEA38AB1467BD97006D2975 /* AddressBookUI.framework */,
+				CAEA38BB1467BDD1006D2975 /* AudioToolbox.framework */,
 				CAEA38AC1467BD97006D2975 /* AVFoundation.framework */,
 				CAEA38AD1467BD97006D2975 /* CFNetwork.framework */,
 				CAEA38AE1467BD97006D2975 /* CoreData.framework */,
-				CAEA38AF1467BD97006D2975 /* CoreLocation.framework */,
-				CAEA30CF1467BCAE006D2975 /* UIKit.framework */,
-				CAEA30D11467BCAE006D2975 /* Foundation.framework */,
 				CAEA30D31467BCAE006D2975 /* CoreGraphics.framework */,
+				CAEA38AF1467BD97006D2975 /* CoreLocation.framework */,
+				CAEA38CC1467C15E006D2975 /* CoreText.framework */,
+				CAEA30D11467BCAE006D2975 /* Foundation.framework */,
+				CAEA38CA1467BE3E006D2975 /* libxml2.dylib */,
+				CAEA38C81467BE32006D2975 /* libz.dylib */,
+				CAEA38BF1467BDD7006D2975 /* MapKit.framework */,
+				CAF71222146F6D3A00FD161D /* MediaPlayer.framework */,
+				CAEA38C41467BE0B006D2975 /* MessageUI.framework */,
+				CAEA38B91467BDB7006D2975 /* MobileCoreServices.framework */,
+				CAEA38C21467BDFF006D2975 /* QuartzCore.framework */,
+				CA83D14114726BF500E004A6 /* QuickLook.framework */,
+				CABA82131470D052008E8AFB /* Security.framework */,
 				CAEA30FB1467BCAE006D2975 /* SenTestingKit.framework */,
+				CAEA38C61467BE13006D2975 /* SystemConfiguration.framework */,
+				CAEA30CF1467BCAE006D2975 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2902,8 +2902,6 @@
 				CA19F1A11484DACE00CDF114 /* tu_97@2x.png in Resources */,
 				EAE9CFC01486319D00EB8755 /* png_93-82.png in Resources */,
 				EAE9CFC11486319D00EB8755 /* png_178@2x.png in Resources */,
-				CAE45CB3148F4EE400447806 /* ReviewRequest.strings in Resources */,
-				CAE45CB4148F4EE400447806 /* ReviewRequest.strings in Resources */,
 				CAE45CB5148F4EE400447806 /* ReviewRequest.strings in Resources */,
 				CA222AE91492105500F168D4 /* 57.png in Resources */,
 				CA222AEA1492105500F168D4 /* 57@2x.png in Resources */,
@@ -2950,6 +2948,8 @@
 				CAC611F514977E7F00C30C60 /* HelpController.xib in Resources */,
 				CA155C7C149846380040C5BD /* set3@2x.png in Resources */,
 				CA155CA1149890B70040C5BD /* PromotionController.xib in Resources */,
+				E4754A38149B57990060C8F9 /* Mydata.plist in Resources */,
+				E4754A3A149B5C400060C8F9 /* Cinemadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3261,22 +3261,6 @@
 				CAAC3B99146C26AD008A74B9 /* zh_Hans */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		CAE45CAB148F4EE400447806 /* ReviewRequest.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAE45CAC148F4EE400447806 /* zh_Hant */,
-			);
-			name = ReviewRequest.strings;
-			sourceTree = "<group>";
-		};
-		CAE45CAE148F4EE400447806 /* ReviewRequest.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAE45CAF148F4EE400447806 /* zh_Hans */,
-			);
-			name = ReviewRequest.strings;
 			sourceTree = "<group>";
 		};
 		CAE45CB1148F4EE400447806 /* ReviewRequest.strings */ = {
