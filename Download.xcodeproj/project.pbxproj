@@ -472,6 +472,8 @@
 		CAF71223146F6D3B00FD161D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF71222146F6D3A00FD161D /* MediaPlayer.framework */; };
 		E4754A38149B57990060C8F9 /* Mydata.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4754A37149B57990060C8F9 /* Mydata.plist */; };
 		E4754A3A149B5C400060C8F9 /* Cinemadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4754A39149B5C400060C8F9 /* Cinemadata.plist */; };
+		E48ADB67149B619900500291 /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = E48ADB57149B619900500291 /* NSAttributedString+Attributes.m */; };
+		E48ADB68149B619900500291 /* OHAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E48ADB59149B619900500291 /* OHAttributedLabel.m */; };
 		EAE9CFC01486319D00EB8755 /* png_93-82.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBE1486319D00EB8755 /* png_93-82.png */; };
 		EAE9CFC11486319D00EB8755 /* png_178@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE9CFBF1486319D00EB8755 /* png_178@2x.png */; };
 /* End PBXBuildFile section */
@@ -1201,6 +1203,10 @@
 		CAF71222146F6D3A00FD161D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E4754A37149B57990060C8F9 /* Mydata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mydata.plist; sourceTree = "<group>"; };
 		E4754A39149B5C400060C8F9 /* Cinemadata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cinemadata.plist; sourceTree = "<group>"; };
+		E48ADB56149B619900500291 /* NSAttributedString+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Attributes.h"; sourceTree = "<group>"; };
+		E48ADB57149B619900500291 /* NSAttributedString+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Attributes.m"; sourceTree = "<group>"; };
+		E48ADB58149B619900500291 /* OHAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHAttributedLabel.h; sourceTree = "<group>"; };
+		E48ADB59149B619900500291 /* OHAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHAttributedLabel.m; sourceTree = "<group>"; };
 		EAE9CFBE1486319D00EB8755 /* png_93-82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_93-82.png"; sourceTree = "<group>"; };
 		EAE9CFBF1486319D00EB8755 /* png_178@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png_178@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1726,6 +1732,7 @@
 		CAEA30C01467BCAE006D2975 = {
 			isa = PBXGroup;
 			children = (
+				E48ADB46149B619900500291 /* OHAttributedLabel */,
 				CAC610411496E75000C30C60 /* tapkulibrary */,
 				CAEA339E1467BD12006D2975 /* Common_Iphone */,
 				CAEA31121467BCED006D2975 /* asi-http-request */,
@@ -2659,6 +2666,18 @@
 			path = Background;
 			sourceTree = "<group>";
 		};
+		E48ADB46149B619900500291 /* OHAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				E48ADB56149B619900500291 /* NSAttributedString+Attributes.h */,
+				E48ADB57149B619900500291 /* NSAttributedString+Attributes.m */,
+				E48ADB58149B619900500291 /* OHAttributedLabel.h */,
+				E48ADB59149B619900500291 /* OHAttributedLabel.m */,
+			);
+			name = OHAttributedLabel;
+			path = ../OHAttributedLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3209,6 +3228,8 @@
 				CA155C83149849190040C5BD /* SeatManager.m in Sources */,
 				CA155C8614984B340040C5BD /* SeatService.m in Sources */,
 				CA155CA0149890B70040C5BD /* PromotionController.m in Sources */,
+				E48ADB67149B619900500291 /* NSAttributedString+Attributes.m in Sources */,
+				E48ADB68149B619900500291 /* OHAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
